@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'OverlockRegular';
+    src: url('fonts/Overlock-Regular-OTF-webfont.eot');
+    src: url('fonts/Overlock-Regular-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Overlock-Regular-OTF-webfont.woff') format('woff'),
+         url('fonts/Overlock-Regular-OTF-webfont.ttf') format('truetype'),
+         url('fonts/Overlock-Regular-OTF-webfont.svg#OverlockRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OverlockItalic';
+    src: url('fonts/Overlock-Italic-OTF-webfont.eot');
+    src: url('fonts/Overlock-Italic-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Overlock-Italic-OTF-webfont.woff') format('woff'),
+         url('fonts/Overlock-Italic-OTF-webfont.ttf') format('truetype'),
+         url('fonts/Overlock-Italic-OTF-webfont.svg#OverlockItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OverlockBold';
+    src: url('fonts/Overlock-Bold-OTF-webfont.eot');
+    src: url('fonts/Overlock-Bold-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Overlock-Bold-OTF-webfont.woff') format('woff'),
+         url('fonts/Overlock-Bold-OTF-webfont.ttf') format('truetype'),
+         url('fonts/Overlock-Bold-OTF-webfont.svg#OverlockBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OverlockBoldItalic';
+    src: url('fonts/Overlock-BoldItalic-OTF-webfont.eot');
+    src: url('fonts/Overlock-BoldItalic-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Overlock-BoldItalic-OTF-webfont.woff') format('woff'),
+         url('fonts/Overlock-BoldItalic-OTF-webfont.ttf') format('truetype'),
+         url('fonts/Overlock-BoldItalic-OTF-webfont.svg#OverlockBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OverlockBlack';
+    src: url('fonts/Overlock-Black-OTF-webfont.eot');
+    src: url('fonts/Overlock-Black-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Overlock-Black-OTF-webfont.woff') format('woff'),
+         url('fonts/Overlock-Black-OTF-webfont.ttf') format('truetype'),
+         url('fonts/Overlock-Black-OTF-webfont.svg#OverlockBlack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OverlockBlackItalic';
+    src: url('fonts/Overlock-BlackItalic-OTF-webfont.eot');
+    src: url('fonts/Overlock-BlackItalic-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Overlock-BlackItalic-OTF-webfont.woff') format('woff'),
+         url('fonts/Overlock-BlackItalic-OTF-webfont.ttf') format('truetype'),
+         url('fonts/Overlock-BlackItalic-OTF-webfont.svg#OverlockBlackItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OverlockSCRegular';
+    src: url('fonts/OverlockSC-Regular-webfont.eot');
+    src: url('fonts/OverlockSC-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OverlockSC-Regular-webfont.woff') format('woff'),
+         url('fonts/OverlockSC-Regular-webfont.ttf') format('truetype'),
+         url('fonts/OverlockSC-Regular-webfont.svg#OverlockSCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
