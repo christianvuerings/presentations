@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Sakai i18n</title>
+    <meta name="author" content="Christian Vuerings" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+-->
+<div id="impress" data-transition-duration="400">
+
+    <!--
+
+        Here is where interesting thing start to happen.
+
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+
+        Positioning information is passed through data attributes.
+
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+
+        It will not be rotated or scaled.
+
+    -->
+    <div id="introduction" class="step slide" data-x="-1000" data-y="-1500">
+        <img class="introduction-logo" src="images/jasigsakai12-ATL-C.png" />
+        <section class="introduction-text">
+            <h1>Sakai OAE - i18n</h1>
+            <p>Christian Vuerings</p>
+            <p>UC Berkeley</p>
+            <p>christian@media.berkeley.edu</p>
+        </section>
+    </div>
+
+    <div id="improvements" class="step slide" data-x="-1000" data-y="-500">
+        <h2>Improvements</h2>
+        <section class="list">
+            <ul>
+                <li>Unit tests</li>
+                <li>Debug mode</li>
+                <li>String replacement</li>
+                <li>Punctuation</li>
+            </ul>
+        </section>
+        <footer><p>Sakai i18n - 2012 Jasig Sakai Conference</p></footer>
+    </div>
+
+    <div id="unittests" class="step slide slidefade" data-x="0" data-y="-500">
+        <h2>Unit tests</h2>
+    </div>
+
+    <div id="unittest" class="step slide slidefade" data-x="1000" data-y="-500">
+        <h2>Unit test example</h2>
+    </div>
+
+    <div id="debugmode" class="step slide slidefade" data-x="2000" data-y="-500">
+        <h2>Debug mode</h2>
+    </div>
+
+    <div id="stringreplacement" class="step slide" data-x="3000" data-y="-500">
+        <h2>String replacement</h2>
+        <section>
+            <img src="images/string-replacement.png">
+        </section>
+        <footer><p>Sakai i18n - 2012 Jasig Sakai Conference</p></footer>
+    </div>
+
+    <div id="punctuation" class="step slide" data-x="4000" data-y="-500">
+        <h2>Punctuation</h2>
+        <section>
+            <img src="images/punctuation.png">
+        </section>
+        <footer><p>Sakai i18n - 2012 Jasig Sakai Conference</p></footer>
+    </div>
+
+    <div id="languages" class="step slide" data-x="-1000" data-y="500">
+        <h2>Rectenly added/updated languages</h2>
+        <section class="list">
+            <ul>
+                <li>Chinese</li>
+                <li>Dutch</li>
+                <li>French</li>
+                <li>Spanish</li>
+            </ul>
+        </section>
+        <footer><p>Sakai i18n - 2012 Jasig Sakai Conference</p></footer>
+    </div>
+
+    <div id="language-chinese" class="step slide" data-x="0" data-y="500">
+        <h2>Chinese</h2>
+        <section class="language">
+            <h3>Harry Jiannan Wang</h3>
+            <p>University of Delaware</p>
+            <img src="images/ud_logo.jpg" />
+        </section>
+        <footer><p>Sakai i18n - 2012 Jasig Sakai Conference</p></footer>
+    </div>
+
+    <div id="language-chinese-picture" class="step slide slidefade" data-x="1000" data-y="500">
+        <h2>Chinese</h2>
+    </div>
+
+    <div id="language-dutch" class="step slide" data-x="2000" data-y="500">
+        <h2>Dutch</h2>
+        <section class="language">
+            <h3>Mark Breuker</h3>
+            <p>Leidse Onderwijsinstellingen</p>
+            <img src="images/loi_logo.gif" />
+        </section>
+        <footer><p>Sakai i18n - 2012 Jasig Sakai Conference</p></footer>
+    </div>
+
+    <div id="language-dutch-picture" class="step slide slidefade" data-x="3000" data-y="500">
+        <h2>Dutch</h2>
+    </div>
+
+    <div id="language-french" class="step slide" data-x="4000" data-y="500">
+        <h2>French</h2>
+        <section class="language">
+            <h3>Frederic Dooremont</h3>
+            <p>Université du Littoral Côte d'Opale</p>
+            <img src="images/ulco_logo.gif" />
+        </section>
+        <footer><p>Sakai i18n - 2012 Jasig Sakai Conference</p></footer>
+    </div>
+
+    <div id="language-french-picture" class="step slide slidefade" data-x="5000" data-y="500">
+        <h2>French</h2>
+    </div>
+
+    <div id="language-spanish" class="step slide" data-x="6000" data-y="500">
+        <h2>Spanish</h2>
+        <section class="language">
+            <h3>Marc S. Reßl</h3>
+            <p>Buenos Aires Institute of Technology</p>
+            <img src="images/itba_logo.jpg" />
+        </section>
+        <footer><p>Sakai i18n - 2012 Jasig Sakai Conference</p></footer>
+    </div>
+
+    <div id="language-spanish-picture" class="step slide slidefade" data-x="7000" data-y="500">
+        <h2>Spanish</h2>
+    </div>
+
+    <div id="goodbye" class="step slide" data-x="-1000" data-y="1500">
+        <h2>Sakai i18n</h2>
+        <section>
+            <div class="words">
+                <span>Thank you</span>
+                <span>Bedankt</span>
+                <span>Merci</span>
+                <span>谢谢</span>
+            </div>
+        </section>
+        <footer><!-- --></footer>
+    </div>
+
+    <!--
+
+        So to make a summary of all the possible attributes used to position presentation steps, we have:
+
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+
+    -->
+    <div id="overview" class="step" data-x="2000" data-y="0" data-scale="8">
+    </div>
+
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+
+    Last, but not least.
+
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+
+    In here I just include full source of the script to make it more readable.
+
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+
+    The `impress()` function also gives you access to the API that controls the presentation.
+
+    Just store the result of the call:
+
+        var api = impress();
+
+    and you will get three functions you can call:
+
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+
+-->
+
+</body>
+</html>
+
+<!--
+
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+
+    Oh, you've already cloned the code from GitHub?
+
+    You have it open in text editor?
+
+    Stop right there!
+
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about
+    creating awesome and engaging presentations.
+
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+
+-->
+
+<!--
+
+    Are you still reading this?
+
+    For real?
+
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+
+    Cheers!
+
+-->
+
