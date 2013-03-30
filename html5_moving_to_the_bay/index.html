@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		.intro h2 {
+			background: rgba(255,255,255, .2);
+			color: #fff;
+			font-size: 70px;
+			margin: 260px 0 0;
+			padding: 10px 0 15px;
+			text-align: center;
+		}
+		#run h2 {
+			margin-top: 370px;
+		}
+		#initiative h2 {
+			margin-top: 195px;
+			padding-left: 305px;
+		}
+		#resume h2 {
+			background: rgba(0,0,0, .6);
+			margin-top: 323px;
+			padding-left: 89px;
+		}
+		#passion h2 {
+			margin-top: 297px;
+			padding-left: 450px;
+		}
+		#finish h2 {
+			color: #fff;
+			font-size: 70px;
+			margin-top: 235px;
+			padding-left: 700px;
+		}
+		.slide .blackbanner {
+			color: #fff;
+			background: rgba(0,0,0, .4);
+			font-size: 70px;
+			padding: 10px 40px 15px;
+		}
+		.fullwidth {
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Moving to the bay</h1>
+		<p><a href="http://denbuzze.com/">Christian Vuerings</a>, <a href="http://berkeley.edu">UC Berkeley</a></p>
+	</header>
+	<section class="slide cover intro" id="cover"><div>
+		<h2 class="fullwidth">Moving to the bay</h2>
+		<img src="pictures/_golden_gate.jpg" alt="">
+	</div></section>
+	<section class="slide cover intro"><div>
+		<h2 class="fullwidth">Moving to the bay<br />&amp;<br />things I've learned since college</h2>
+		<img src="pictures/_golden_gate.jpg" alt="">
+	</div></section>
+	<section class="slide cover" id="cambridge"><div>
+		<h2 class="fullwidth blackbanner">My story starts here</h2>
+		<img src="pictures/_cambridge4.jpg" alt="">
+	</div></section>
+	<section class="slide cover" id="run"><div>
+		<h2 class="fullwidth blackbanner">and ends up here...</h2>
+		<img src="pictures/_run1.jpg" alt="">
+	</div></section>
+	<section class="slide cover" id="initiative"><div>
+		<h2 class="fullwidth blackbanner">Take initiative</h2>
+		<img src="pictures/_crab.jpg" alt="">
+	</div></section>
+	<section class="slide cover" id="resume"><div>
+		<h2 class="fullwidth blackbanner">GitHub/Dribbble <strong>is</strong> your resume</h2>
+		<img src="pictures/_github_dribbble.png" alt="">
+	</div></section>
+
+	<section class="slide cover" id="passion"><div>
+		<h2 class="fullwidth blackbanner">Be passionate</h2>
+		<img src="pictures/_heart_sf.jpg" alt="">
+	</div></section>
+
+	<section class="slide cover" id="finish"><div>
+		<h2 class="fullwidth">@denbuzze</h2>
+		<img src="pictures/_finish.jpg" alt="">
+	</div></section>
+
+	<!--
+As an engineer, there is a short list of tools that you must be rabid about. Rabid. Foaming at the mouth crazy.
+~ Michael Lopp, aka Rands
+-->
+
+	<!--<section class="slide" data-timing="00:05"><div>
+		<h2>Slide with timer</h2>
+		<p>It will change right in five seconds</p>
+		<footer>
+			Presenter note for the first slide
+		</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Heading</h2>
+		<p>In your slides text you can use <a href="http://google.com/">links</a> and various inline elements for <em>emotional</em> and <strong>strong</strong> emphasis or just for <i>italic</i> or <b>bold</b> decoration. <code>&lt;code&gt;</code> is used for inline code samples.</p>
+		<footer>
+			Presenter note for the second slide
+		</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Two rows.<br> Mighty heading</h2>
+		<p>You can use two lines header but it would reduce space on a slide. The “Ribbon” theme is designed for seven lines of code after one-line header by default.</p>
+		<p class="note">This paragraph could be used as a footnote</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Various lists</h2>
+		<ul>
+			<li>Simple lists are marked with bullets.</li>
+			<li>Ordered lists begin with a number.</li>
+			<li>You can even nest lists one inside another.
+				<ol>
+					<li>Or mix their types.</li>
+					<li>But do not go too far.</li>
+					<li>Otherwise audience will be bored.</li>
+				</ol>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Serious citation</h2>
+		<figure>
+			<blockquote>
+				<p>You can wrap one or more paragraphs into citation, which will make text italic and add a nice quote on the left. Giving the citation source would make it even more serious.</p>
+			</blockquote>
+			<figcaption>Vadim Makeev</figcaption>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>When you have a lot of code</h2>
+		<pre>
+			<code>&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
+			<code>    &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Code in separate blocks</h2>
+		<pre>
+			<code><mark>&lt;html</mark> lang="en"&gt;</code>
+		</pre>
+		<p class="note">Now you can add a note for each block</p>
+		<pre>
+			<code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
+		</pre>
+		<p class="note">And explain what is interesting about it</p>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>You can shout<br> this way</h2>
+	</div></section>
+	<section class="slide cover" id="Picture"><div>
+		<h2>And place any picture</h2>
+		<img src="pictures/picture.jpg" alt="">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Inner navigation</h2>
+		<ol>
+			<li>Lets you change objects one by one</li>
+			<li class="next">For example, show list items</li>
+			<li class="next">Or switch pictures</li>
+			<li class="next">And much more</li>
+			<li class="next">But it will work only once</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Shower Presentation Engine</h2>
+		<p>Vadim Makeev, Opera Software</p>
+		<ul>
+			<li><a href="http://pepelsbey.net">pepelsbey.net</a></li>
+			<li><a href="http://twitter.com/pepelsbey">twitter.com/pepelsbey</a></li>
+			<li><a href="mailto:pepelsbey@gmail.com">pepelsbey@gmail.com</a></li>
+		</ul>
+		<p>Shower: <a href="https://github.com/shower/shower">github.com/shower/shower</a></p>
+	</div></section>
+	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+	-->
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+	<div class="progress"><div></div>-->
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
