@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Front-end Tools - Christian Vuerings</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
@@ -10,13 +10,40 @@
 		set slide ID to get needed elements
 		-->
 	<style>
-		.intro h2 {
-			background: rgba(255,255,255, .2);
-			color: #fff;
+		.slide h2 {
 			font-size: 70px;
-			margin: 260px 0 0;
-			padding: 10px 0 15px;
+			color: #000;
 			text-align: center;
+		}
+		.slide .blackbanner {
+			color: #fff;
+			background: rgba(0,0,0, .4);
+			padding: 10px 40px 15px;
+			text-align: left;
+		}
+		.fullwidth {
+			left: 0;
+			position: absolute;
+			text-align: left;
+			width: 100%;
+		}
+		.center {
+			text-align: center;
+		}
+		.lowopacity {
+			opacity: 0.6;
+		}
+		.footer {
+			bottom: 160px;
+			color: #fff;
+			padding-left: 255px;
+			position: absolute;
+			text-align: center;
+		}
+
+		.intro h2 {
+			margin: 260px 0 0;
+			text-align: center !important;
 		}
 		#run h2 {
 			margin-top: 370px;
@@ -36,44 +63,91 @@
 		}
 		#finish h2 {
 			color: #fff;
-			font-size: 70px;
 			margin-top: 235px;
 			padding-left: 700px;
+			text-align: left;
 		}
-		.slide .blackbanner {
-			color: #fff;
-			background: rgba(0,0,0, .4);
-			font-size: 70px;
-			padding: 10px 40px 15px;
-		}
-		.fullwidth {
-			left: 0;
-			position: absolute;
-			width: 100%;
-		}
+
 	</style>
 </head>
 <body class="list">
 	<header class="caption">
-		<h1>Moving to the bay</h1>
+		<h1>Development workflow &amp; Front-end tools</h1>
 		<p><a href="http://denbuzze.com/">Christian Vuerings</a>, <a href="http://berkeley.edu">UC Berkeley</a></p>
 	</header>
 	<section class="slide cover intro" id="cover"><div>
-		<h2 class="fullwidth">Moving to the bay</h2>
+		<h2 class="fullwidth blackbanner">Front-end Tools<!--<br />&amp;<br />Workflow--></h2>
 		<img src="pictures/_golden_gate.jpg" alt="">
+		<div class="footer">
+			<span class="lowopacity">Christian Vuerings</span> - @denbuzze
+		</div>
 	</div></section>
-	<section class="slide cover intro"><div>
-		<h2 class="fullwidth">Moving to the bay<br />&amp;<br />things I've learned since college</h2>
-		<img src="pictures/_golden_gate.jpg" alt="">
+	<section class="slide cover" id="kortrijk"><div>
+		<h2 class="fullwidth blackbanner">My story starts here</h2>
+		<img src="pictures/_kortrijk.jpg" alt="">
 	</div></section>
 	<section class="slide cover" id="cambridge"><div>
-		<h2 class="fullwidth blackbanner">My story starts here</h2>
+		<h2 class="fullwidth blackbanner">some time in Cambridge</h2>
 		<img src="pictures/_cambridge4.jpg" alt="">
 	</div></section>
 	<section class="slide cover" id="run"><div>
 		<h2 class="fullwidth blackbanner">and ends up here...</h2>
 		<img src="pictures/_run1.jpg" alt="">
 	</div></section>
+
+	<section class="slide cover" id="tools"><div>
+		<h2>Front-end Tools</h2>
+		<img src="pictures/_tools.jpg" alt="">
+	</div></section>
+
+	<!-- Tools -->
+	<section class="slide" id="editorconfig"><div>
+		<h2><img src="pictures/_editorconfig.png" alt=""> EditorConfig</h2>
+		<img src="pictures/_editorconfig_example.png" alt="">
+		<!-- INI File -->
+	</div></section>
+	<section class="slide" id="livereload"><div>
+		<h2>LiveReload</h2>
+		<div class="center">
+			<img src="pictures/_livereload.png" alt="">
+		</div>
+		<!-- Huge timesaver -->
+		<!-- Next version: Paul Rouget - Live editing - http://paulrouget.com/e/devtoolsnext/ -->
+	</div></section>
+	<section class="slide" id="grunt"><div>
+		<h2>Grunt</h2>
+		<div class="center">
+			<img src="pictures/_grunt.png" alt="">
+		</div>
+		<!-- Build system -->
+		<!-- Minify/Hash/Lint -->
+	</div></section>
+	<section class="slide" id="bower"><div>
+		<h2>Bower</h2>
+		<div class="center">
+			<img src="pictures/_bower.png" alt="">
+		</div>
+		<!-- A PACKAGE MANAGER FOR THE WEB -->
+		<!-- Npm / ruby gems -->
+	</div></section>
+	<section class="slide" id="dotfiles"><div>
+		<h2>Dotfiles</h2>
+		<div class="center">
+			<img src="pictures/_dotfiles.jpg" alt="" width="700">
+		</div>
+		<!-- Create sublime projects -->
+		<!-- Tar -->
+		<!-- open source those - paul irish -->
+	</div></section>
+	<section class="slide" id="travis"><div>
+		<h2>Travis</h2>
+		<div class="center">
+			<img src="pictures/_travis.png" alt="">
+		</div>
+		<!-- CI - Continuous integration - supports GitHub -->
+	</div></section>
+
+	<!-- Outro -->
 	<section class="slide cover" id="initiative"><div>
 		<h2 class="fullwidth blackbanner">Take initiative</h2>
 		<img src="pictures/_crab.jpg" alt="">
@@ -82,7 +156,6 @@
 		<h2 class="fullwidth blackbanner">GitHub/Dribbble <strong>is</strong> your resume</h2>
 		<img src="pictures/_github_dribbble.png" alt="">
 	</div></section>
-
 	<section class="slide cover" id="passion"><div>
 		<h2 class="fullwidth blackbanner">Be passionate</h2>
 		<img src="pictures/_heart_sf.jpg" alt="">
@@ -92,6 +165,16 @@
 		<h2 class="fullwidth">@denbuzze</h2>
 		<img src="pictures/_finish.jpg" alt="">
 	</div></section>
+
+	Show jQuery lifestream
+	//Optimize images - imageoptim
+	//Zurb/bootstrap
+	Travis
+
+
+
+
+	<!-- images -->
 
 	<!--
 As an engineer, there is a short list of tools that you must be rabid about. Rabid. Foaming at the mouth crazy.
