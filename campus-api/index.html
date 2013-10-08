@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>CalCentral APIs on Campus - Christian Vuerings</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<link href='pictures/_wrench.png' rel='shortcut icon'/>
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		.slide h2 {
+			color: #000;
+		}
+		.slide.shout h2 {
+			font-size: 50px;
+			font-weight: normal;
+		}
+		.slide h2 img {
+			float: left;
+			max-width: 100px;
+		}
+		.slide h2 span {
+			float: left;
+			margin-left: 20px;
+			min-width: 500px;
+			text-align: left;
+		}
+		.slide h3 {
+			clear: both;
+			font-size: 35px;
+		}
+		.slide .tagline {
+			color: #ccc;
+			font-size: 30px;
+			font-weight: normal;
+			margin-bottom: 30px;
+		}
+		.slide ul, .slide ol {
+			color: #333;
+			clear: both;
+		}
+		.slide strong {
+			color: #000;
+		}
+		.slide .blackbanner {
+			color: #fff;
+			background: rgba(0,0,0, .4);
+			font-size: 70px;
+			padding: 10px 40px 15px;
+			text-align: left;
+		}
+		.fullwidth {
+			left: 0;
+			position: absolute;
+			text-align: left;
+			width: 100%;
+		}
+		.center {
+			text-align: center;
+		}
+		.lowopacity {
+			opacity: 0.6;
+		}
+		.footer {
+			bottom: 160px;
+			color: #fff;
+			padding-left: 215px;
+			position: absolute;
+			text-align: center;
+		}
+		.intro h2 {
+			font-size: 85px;
+			margin: 260px 0 0;
+			padding-bottom: 65px !important;
+			text-align: center !important;
+		}
+		#run h2 {
+			margin-top: 370px;
+		}
+
+		#tools h2 {
+			font-size: 90px;
+		}
+		#shovel h2 {
+			margin-top: 375px;
+			padding-left: 310px;
+		}
+		#snowmachine h2 {
+			margin-top: 475px;
+		}
+
+		#editorconfig h3 {
+			margin-top: 310px;
+			padding-left: 430px;
+		}
+		#livereload h3 {
+			margin-top: 110px;
+		}
+
+		#initiative h2 {
+			margin-top: 195px;
+			padding-left: 305px;
+		}
+		#resume h2 {
+			background: rgba(0,0,0, .6);
+			margin-top: 323px;
+			padding-left: 89px;
+		}
+		#passion h2 {
+			margin-top: 297px;
+			padding-left: 450px;
+		}
+		#finish h2 {
+			color: #fff;
+			margin-top: 235px;
+			padding-left: 700px;
+			text-align: left;
+		}
+
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>APIs on Campus</h1>
+		<p>
+			<a href="http://denbuzze.com/">Christian Vuerings</a>, <a href="http://berkeley.edu">UC Berkeley - ETS</a>
+		</p>
+	</header>
+	<section class="slide cover intro" id="cover">
+		<div>
+			<h2 class="fullwidth blackbanner">CalCentral - APIs on campus</h2>
+			<img src="pictures/_golden_gate.jpg" alt="">
+			<div class="footer">
+				<span class="lowopacity">Christian Vuerings</span> - @denbuzze
+			</div>
+		</div>
+	</section>
+	<section class="slide cover">
+		<div>
+			<h2 class="fullwidth blackbanner">Different ways</h2>
+			<img src="pictures/_kortrijk.jpg" alt="">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Different ways to access data:</h2>
+			<ul>
+				<li>Screen scraping</li>
+				<li>FTP</li>
+				<li>Database views</li>
+				<li><strong>API</strong></li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>An <strong>application programming interface</strong> (API) is a protocol intended to be used as an <strong>interface</strong> by software components to <strong>communicate</strong> with each other.</h2>
+	</div></section>
+
+	<section class="slide">
+		<div>
+			<h2>We're not the only ones...</h2>
+			<img src="pictures/_api1.jpg" width="200">
+			<img src="pictures/_api2.jpg" width="200">
+			<img src="pictures/_api3.png" width="200">
+			<img src="pictures/_api4.png" width="200">
+			<img src="pictures/_api5.png" width="200">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>We're not the only ones...</h2>
+			<img src="pictures/_api_growth.png" class="center">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Private APIs</h2>
+			<img src="pictures/_private.png" width="700">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>APIs: Why?</h2>
+			<ul>
+				<li><strong>Empowering</strong> users (students/faculty/staff)</li>
+				<li>Integrate in a <strong>standard</strong> way</li>
+				<li><strong>Collaboration</strong> accross &amp; outside campus</li>
+				<li>Better <strong>control</strong></li>
+				<li>Easier to integrate with multiple <strong>devices</strong></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>CalCentral APIs</h2>
+			<ul>
+				<li><strong>Internal REST API</strong>: front-end/back-end</li>
+				<li>Current <strong>integrations</strong>:
+					<ul>
+						<li>CalLink (student groups)</li>
+						<li>Google</li>
+						<li>Canvas (LMS)</li>
+						<li>Bearfacts (student data)</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>CalCentral - WIP: Real-time API</h2>
+			<ul>
+				<li>Notify the user as soon as there is an update</li>
+				<li>In current development:
+					<ul>
+						<li>Registration status</li>
+						<li>Registration blocks</li>
+						<li>Enrollment changes</li>
+					</ul>
+				</li>
+				<li>Internally: through <strong>Eventsource</strong> or <strong>Websockets</strong></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Let's make it happen, together</h2>
+			<ul>
+				<li>Students, faculty and staff align</li>
+				<li><a href="http://ideas.berkeley.edu/">http://ideas.berkeley.edu/</a></li>
+			</ul>
+			<img src="pictures/join_forces.jpg" width="500">
+		</div>
+	</section>
+</body>
+</html>

@@ -7,6 +7,8 @@ cd ~/Projects/presentations/front-end-tools/showoff
 server 8001
 
 * Check files
+  * editorconfig.js
+  * livereload.html
 
 * Hide sidebar
 Command + K | Command + B
