@@ -144,7 +144,7 @@ body {
 .bespoke-active .content > * {
   opacity: 1;
 }
-
+/*
 .bespoke-active .content > *:nth-child(1) {
   -webkit-transition: opacity 0.5s linear;
   -webkit-transition-delay: 0s;
@@ -224,7 +224,7 @@ body {
   -o-transition: opacity 0.5s linear 2.7s;
   transition: opacity 0.5s linear 2.7s;
 }
-
+*/
 
 section {
   color: #f2f2f2;

@@ -1,4 +1,4 @@
-Angular.JS
+AngularJS
 
 Overview
 
@@ -24,6 +24,6 @@ Include
  - Link
  - Resources
  	Egghead.io
- 	Angular.js docs
+ 	AngularJS docs
  	IRC channel
  	Google group

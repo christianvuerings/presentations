@@ -82,17 +82,65 @@ article.start::before {
   background-image: url("../images/skydiving3.jpg");
 }
 
-article.end .content-highlight {
-  background: rgba(0,0,0,0.6);
-  color: #fff;
+article.feet-12500::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.5);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/12500-view.jpg");
 }
-article.end section div {
-  bottom: 0px;
-  position: fixed;
+
+article.feet-10000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/10000-view.jpg");
 }
+
+article.feet-8000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/8000-view.jpg");
+}
+
+article.feet-6000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/6000-view.jpg");
+}
+
+article.feet-4000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/4000-view.jpg");
+}
+
+article.feet-2000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/2000-view.jpg");
+}
+
+article.feet-5::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/5-view.jpg");
+}
+
+article.feet-0::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/0-view.jpg");
+}
+
 article.end::before {
-  -webkit-filter: blur(0.5px) grayscale(0) brightness(1);
-  -moz-filter: blur(0.5px) grayscale(0.3) brightness(0.4);
-  filter: blur(0.5px) grayscale(0.3) brightness(0.4);
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
   background-image: url("../images/skydiving4.jpg");
 }
