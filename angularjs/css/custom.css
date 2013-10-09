@@ -79,7 +79,7 @@ article.start::before {
   -webkit-filter: blur(0.5px) grayscale(0) brightness(1);
   -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
   filter: blur(0.5px) grayscale(0) brightness(0.4);
-  background-image: url("/images/skydiving3.jpg");
+  background-image: url("../images/skydiving3.jpg");
 }
 
 article.end .content-highlight {
@@ -94,5 +94,5 @@ article.end::before {
   -webkit-filter: blur(0.5px) grayscale(0) brightness(1);
   -moz-filter: blur(0.5px) grayscale(0.3) brightness(0.4);
   filter: blur(0.5px) grayscale(0.3) brightness(0.4);
-  background-image: url("/images/skydiving4.jpg");
+  background-image: url("../images/skydiving4.jpg");
 }

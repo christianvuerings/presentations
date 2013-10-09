@@ -6,7 +6,9 @@ Structure
  - Overview
    - What is it?
    - AngularJS + Jquery?
+   - 2 way data binding
  - Scope
+  Rootscope / Controller scope / Repeater scope
  - Dependency injection
  - View / Model
  - Controller
