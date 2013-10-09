@@ -1,0 +1,7 @@
+<form name="graddiv">
+  List: <input name="namesInput" ng-model="names" ng-list required>
+  <span ng-show="graddiv.namesInput.$error.required">
+    Required!
+  </span>
+  <tt>names = {{names}}</tt>
+</form>

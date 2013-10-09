@@ -10,6 +10,25 @@
 
 }
 
+iframe {
+  border: none;
+  height: 100px;
+  margin-top: 5px;
+  width: 790px;
+}
+
+.header-list {
+  color: #ccc;
+}
+.header-list strong {
+  color: #f2f2f2;
+}
+.iframe-150 {
+  height: 150px;
+}
+.iframe-255 {
+  height: 265px;
+}
 
 .code,
 .livecode {
