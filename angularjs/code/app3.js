@@ -1,1 +1,1 @@
-module('calcentral');
+angular.module('graddiv', []);
