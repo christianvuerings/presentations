@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'sofia_pro_lightregular';
+    src: url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.eot');
+    src: url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.woff') format('woff'),
+         url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.ttf') format('truetype'),
+         url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.svg#sofia_pro_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.header-list {
+  color: #ccc;
+}
+.header-list strong {
+  color: #f2f2f2;
+}
+
+.to-the-resque .content {
+  width: 550px;
+}
+
+.link a {
+  display: inline-block;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+article {
+  font-family: 'sofia_pro_lightregular';
+}
+article .content-highlight {
+  background: rgba(0,0,0,0.5);
+  color: #f2f2f2;
+  width: 100%;
+}
+article .content-highlight .byline {
+  color: #666;
+}
+
+/* ---- backgrounds ---- */
+.start .unbrokenline {
+  border-bottom: 1px dotted #eee;
+}
+.start .content-highlight {
+  background: rgba(0,0,0,0.5);
+  color: #f2f2f2;
+}
+.start .content-highlight .byline {
+  color: #fefefe;
+}
+.start .content-highlight .byline::before, .start .content-highlight .byline::after {
+  border-bottom: 1px dotted #eee;
+}
+article.start::before {
+  -webkit-filter: blur(2.5px) grayscale(0) brightness(0.6);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/cfv-intro.jpg");
+}
+
+article.demo::before {
+  -webkit-filter: blur(3.5px) grayscale(0) brightness(0.3);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/cfv-demo.jpg");
+}
+
+article.highlight::before {
+  -webkit-filter: blur(2.5px) grayscale(0) brightness(0.5);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/cfv-highlight.jpg");
+}
+
+article.timeline::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/cfv-time.jpg");
+}
+
+article.next::before {
+  -webkit-filter: blur(3.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/cfv-next.jpg");
+}
+
+article.team::before {
+  -webkit-filter: blur(3.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/cfv-team.jpg");
+}
