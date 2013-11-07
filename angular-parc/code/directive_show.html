@@ -1,0 +1,7 @@
+<form name="parc">
+  List: <input name="namesInput" ng-model="names" ng-list required>
+  <span ng-show="parc.namesInput.$error.required">
+    Required!
+  </span>
+  <tt>names = {{names}}</tt>
+</form>
