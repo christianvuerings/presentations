@@ -1,5 +1,5 @@
 function SpicyCtrl($scope) {
-  $scope.spice = 'very';
+  $scope.customSpice = 'very';
   $scope.spicy = function(spice) {
     $scope.spice = spice;
   };
