@@ -1,0 +1,7 @@
+<button ng-click="predicate = 'name'; reverse=!reverse">
+  Order Name
+  </button>
+
+<tr ng-repeat="friend in friends | orderBy:predicate:reverse">
+  <td ng-bind="friend.name"></td>
+</tr>

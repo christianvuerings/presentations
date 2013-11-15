@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'sofia_pro_lightregular';
+    src: url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.eot');
+    src: url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.woff') format('woff'),
+         url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.ttf') format('truetype'),
+         url('../fonts/sofiapro_light_macroman/SofiaProLight-webfont.svg#sofia_pro_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+iframe {
+  background: #fff;
+  border: none;
+  height: 115px;
+  margin-top: 5px;
+  width: 790px;
+}
+
+.header-list {
+  color: #ccc;
+}
+.header-list strong {
+  color: #f2f2f2;
+}
+.iframe-150 {
+  height: 150px;
+}
+.iframe-255 {
+  height: 286px;
+}
+
+.code,
+.livecode {
+  background-color: #142444;
+}
+
+.livecode input {
+  background: #142444;
+  border: none;
+  border-bottom: 2px solid #000000;
+  color: #FFF;
+  width: 80px;
+}
+
+.livecode input:focus {
+  outline: none;
+}
+
+.livecode .hello .result {
+  color: #F80;
+}
+
+.to-the-resque .content {
+  width: 550px;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.long :not(pre) > code[class*="language-"],
+.long pre[class*="language-"] {
+  width: 900px;
+}
+
+.line-highlight {
+  background: rgba(216, 223, 65, 0.13);
+}
+
+pre[data-line] {
+  padding: inherit;
+}
+
+.link a {
+  display: inline-block;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+article {
+  font-family: 'sofia_pro_lightregular';
+}
+article .content-highlight {
+  background: rgba(255,255,255,0.3);
+  color: #424242;
+  width: 100%;
+}
+article .content-highlight .byline {
+  color: #666;
+}
+
+/* ---- backgrounds ---- */
+article.start::before {
+  -webkit-filter: blur(0.5px) grayscale(0) brightness(1);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/skydiving3.jpg");
+}
+
+article.feet-12500::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.5);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/12500-view.jpg");
+}
+
+article.feet-10000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/10000-view.jpg");
+}
+
+article.feet-8000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/8000-view.jpg");
+}
+
+article.feet-6000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/6000-view.jpg");
+}
+
+article.feet-4000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/4000-view.jpg");
+}
+
+article.feet-2000::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/2000-view.jpg");
+}
+
+article.feet-5::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/5-view.jpg");
+}
+
+article.feet-0::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/0-view.jpg");
+}
+
+article.end::before {
+  -webkit-filter: blur(2.5px) grayscale(0.5) brightness(0.4);
+  -moz-filter: blur(0.5px) grayscale(0) brightness(0.4);
+  filter: blur(0.5px) grayscale(0) brightness(0.4);
+  background-image: url("../images/skydiving4.jpg");
+}

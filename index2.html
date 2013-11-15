@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+
+  <script src="http://www.polymer-project.org/polymer.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Presentations by Christian Vuerings</h1>
+  </header>
+
+  <section>
+    <template repeat="{{ presentations }}" id="presentationlist">
+      <ul>
+        <li>
+          <a href="{{ code_url }}">{{ name }}</a>
+        </li>
+      </ul>
+    </template>
+  </section>
+
+
+  <script>
+
+    // Let's play with some VanillaJS
+    // The chocolate flavored one was sold out.
+    (function initialization() {
+
+      var presentationlist = document.getElementById('presentationlist');
+
+      var renderPresentations = function(presentations) {
+        presentationlist.model = {
+          presentations: presentations
+        };
+        Platform.performMicrotaskCheckpoint();
+      };
+
+      var parsePresentations = function(directories) {
+        var presentations = [];
+        console.log(directories);
+        directories.forEach(function(element) {
+          presentations.push({
+            code_url: element._links.html,
+            name: element.name
+          })
+        });
+        renderPresentations(presentations);
+      };
+
+      var requestPresentations = function() {
+
+        var xmlhttp = !!window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+
+        xmlhttp.open('GET', 'https://api.github.com/repos/christianv/presentations/trees', true);
+        xmlhttp.responseType = 'json';
+
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            var json = JSON.parse(xmlhttp.responseText);
+            var directories = json.filter(function(element) {
+              return element.type === 'dir';
+            })
+            parsePresentations(directories);
+          }
+        }
+
+        xmlhttp.send();
+
+      };
+
+      requestPresentations();
+    })();
+  </script>
+</body>
+</html>

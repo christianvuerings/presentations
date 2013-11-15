@@ -1,0 +1,6 @@
+<body ng-controller="SpicyCtrl">
+  <input ng-model="customSpice" value="wasabi">
+  <button ng-click="spicy('chili')">Chili</button>
+  <button ng-click="spicy(customSpice)">Custom spice</button>
+  <p>The food is {{spice}} spicy!</p>
+</body>
