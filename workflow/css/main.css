@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'roboto_slabthin';
+  src: url('RobotoSlab-Thin-webfont.eot');
+  src: url('RobotoSlab-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+       url('RobotoSlab-Thin-webfont.woff') format('woff'),
+       url('RobotoSlab-Thin-webfont.ttf') format('truetype'),
+       url('RobotoSlab-Thin-webfont.svg#roboto_slabthin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_slablight';
+  src: url('RobotoSlab-Light-webfont.eot');
+  src: url('RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('RobotoSlab-Light-webfont.woff') format('woff'),
+       url('RobotoSlab-Light-webfont.ttf') format('truetype'),
+       url('RobotoSlab-Light-webfont.svg#roboto_slablight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_slabregular';
+  src: url('RobotoSlab-Regular-webfont.eot');
+  src: url('RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('RobotoSlab-Regular-webfont.woff') format('woff'),
+       url('RobotoSlab-Regular-webfont.ttf') format('truetype'),
+       url('RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_slabbold';
+  src: url('RobotoSlab-Bold-webfont.eot');
+  src: url('RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('RobotoSlab-Bold-webfont.woff') format('woff'),
+       url('RobotoSlab-Bold-webfont.ttf') format('truetype'),
+       url('RobotoSlab-Bold-webfont.svg#roboto_slabbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bold {
+  font-family: 'roboto_slabbold';
+}
+.light {
+  font-family: 'roboto_slablight';
+}
+.regular {
+  font-family: 'roboto_slabregular';
+}
+.thin {
+  font-family: 'roboto_slabthin';
+}
+
+body {
+  font: 25px/2 'roboto_slabregular',sans-serif;
+}
+.caption h1 {
+  font: 700 50px/1 'roboto_slablight',sans-serif;
+}
+.slide::after {
+  display: none;
+}
+.slide h2 {
+  font: 700 70px/1 'roboto_slablight',sans-serif;
+}
+.slide a {
+  border: none;
+  color: #DA564A;
+}
+.slide ol li, .slide ul li {
+  font-size: 30px;
+}
+.slide>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 70px 120px 0;
+  width: 784px;
+  height: 570px;
+}
+.slide.shout h2 {
+  font-family: 'roboto_slabthin', sans-serif;
+  font-size: 80px;
+}
+.slide .slide-title {
+  font: 70px/1 'roboto_slablight',sans-serif
+}
+.slide .slide-tagline {
+  color: #ccc;
+  font-size: 25px;
+  margin-top: 5px;
+}

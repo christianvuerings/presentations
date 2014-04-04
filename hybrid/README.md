@@ -9,7 +9,7 @@
  - Running CLE & OAE side by side
 
 ## Features
- - Simultanous login
+ - Simultaneous login
  - Secure - shared secret & https
  - Same domain
 
@@ -42,7 +42,7 @@ https://source.sakaiproject.org/svn/reference/trunk/
 
 
 
-Sakai OAE - Current State of the Project 
+Sakai OAE - Current State of the Project
 (Monday 9:30 AM - 10:30 AM)
 
 
@@ -52,7 +52,7 @@ a) Introduction and overview (Anthony - 5/10 minutes)
 in the real world, by real people
 
 - Show various pictures of landing pages of production environments (Berkeley, Cambridge,
-NYU, CSU?, rSmart, UvA, sharespace, OAE-community, etc.) 
+NYU, CSU?, rSmart, UvA, sharespace, OAE-community, etc.)
 
 - Thank institutions that have been involved in the last year
 
@@ -62,7 +62,7 @@ NYU, CSU?, rSmart, UvA, sharespace, OAE-community, etc.)
 has become a lot more mature, a lot more stable, has sized up, etc.
 
 - Give a brief overview (timeline) of the releases that have happened in the past year, and
-their main features/characteristics 
+their main features/characteristics
 
 
 b) Demo of 1.3.0 (? - 20 minutes)
