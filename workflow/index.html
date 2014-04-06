@@ -73,6 +73,87 @@
       }
     </style>
   </div></section>
+  <section class="slide" id="lintoverview"><div>
+    <h2 class="slide-title slide-title-blue">
+      Linting
+      <div class="slide-tagline">will hurt your feelings</div>
+    </h2>
+    <ol>
+      <li>Live linting</li>
+      <li>On build</li>
+      <li>jslint, jshint &amp; jscs</li>
+      <li>CSSLint</li>
+      <li>HTML Tidy</li>
+    </ol>
+  </div></section>
+  <section class="slide shout cover" id="build"><div>
+    <h2>Optimize your <span class="regular">build</span></h2>
+    <img src="images/build2.svg" alt="">
+    <style>
+      #build {
+        background-color: #fff;
+      }
+      #build h2 {
+        top: 30%;
+      }
+    </style>
+  </div></section>
+  <section class="slide shout cover" id="gruntgulp"><div>
+    <h2>Grunt <span class="regular">&amp;</span> Gulp</h2>
+    <img src="images/build.svg" alt="">
+    <style>
+      #gruntgulp {
+        background-color: #fff;
+      }
+      #gruntgulp h2 {
+        padding-left: 95px;
+        text-align: left;
+      }
+    </style>
+  </div></section>
+  <section class="slide" id="gruntgulpoverview"><div>
+    <h2 class="slide-title slide-title-green">
+      <a href="http://gruntjs.com/">Grunt</a> &amp; <a href="http://gulpjs.com/">Gulp</a>
+      <div class="slide-tagline">2 build tools</div>
+    </h2>
+    <ol>
+      <li>Compile</li>
+      <li>Concatenate</li>
+      <li>Minify</li>
+      <li>Hash</li>
+      <li>Watch for changes</li>
+    </ol>
+  </div></section>
+    <section class="slide" id="gruntgulpcompare"><div>
+    <h2 class="slide-title slide-title-green">
+      <a href="http://gruntjs.com/">Grunt</a> &amp; <a href="http://gulpjs.com/">Gulp</a>
+      <div class="slide-tagline">2 build tools, slightly different</div>
+    </h2>
+    <table>
+      <thead>
+        <th></th>
+        <th>Grunt</th>
+        <th>Gulp</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Build file</th>
+          <td>config</td>
+          <td>code</td>
+        </tr>
+        <tr>
+          <th scope="row">Plug-ins</th>
+          <td>do multiple things</td>
+          <td>1 per task</td>
+        </tr>
+        <tr>
+          <th scope="row">First commit</th>
+          <td>Sept 2011</td><!-- 2011-09-21 -->
+          <td>July 2013</td><!-- 2013-07-03 -->
+        </tr>
+      </tbody>
+    </table>
+  </div></section>
   <section class="slide shout cover" id="git"><div>
     <h2>Supercharge <span class="regular">Git</span></h2>
     <img src="images/git_supercharge.svg" alt="">
@@ -106,121 +187,54 @@
       <div class="slide-tagline">less typing</div>
     </h2>
     <pre><code class="language-bash">git clone git://github.com/schacon/ticgit.git</code></pre>
-    <img src="images/arrow.svg" alt="">
+    <img class="arrow" src="images/arrow.svg" alt="">
     <pre><code class="language-bash">git clone schacon/ticgit</code></pre>
   </div></section>
 
-  <section class="slide" id="hubtest"><div>
+  <section class="slide" id="hubtyping2"><div>
     <h2 class="slide-title">
       <a href="https://github.com/github/hub/">Hub</a>
-      <div class="slide-tagline">helps you win at git</div>
+      <div class="slide-tagline">less typing</div>
     </h2>
-    <pre><code class="language-css">p { color: red }</code></pre>
-    <pre class="line-numbers"><code class="language-css">(function() {
-  'use strict';
-
-  var nmct = 'nmct'
-})();</code></pre>
+    <pre class="small"><code class="language-bash">git remote add rtomayko git://github.com/rtomayko/CURRENT_REPO.git</code></pre>
+    <img class="arrow" src="images/arrow.svg" alt="">
+    <pre><code class="language-bash">git remote add rtomayko</code></pre>
   </div></section>
 
-  <section class="slide"><div>
-    <h2>Plain Text on Your Slides</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+  <section class="slide" id="hubpr"><div>
+    <h2 class="slide-title">
+      <a href="https://github.com/github/hub/">Hub</a>
+      <div class="slide-tagline">create pull requests</div>
+    </h2>
+    <pre><code class="language-bash">git pull-request -m "Howest goes USA"</code></pre>
   </div></section>
-  <section class="slide"><div>
-    <h2>All Kind of Lists</h2>
-    <ol>
-      <li>Simple lists are marked with bullets</li>
-      <li>Ordered lists begin with a number</li>
-      <li>You can even nest lists one inside another
-        <ul>
-          <li>Or mix their types</li>
-          <li>But do not go too far</li>
-          <li>Otherwise audience will be bored</li>
-        </ul>
-      </li>
-      <li>Look, seven rows exactly!</li>
-    </ol>
+
+  <section class="slide" id="hubcreate"><div>
+    <h2 class="slide-title">
+      <a href="https://github.com/github/hub/">Hub</a>
+      <div class="slide-tagline">create repos</div>
+    </h2>
+    <pre><code class="language-bash">git create</code></pre>
   </div></section>
-  <section class="slide"><div>
-    <h2>Serious Citations</h2>
-    <figure>
-      <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-      </blockquote>
-      <figcaption>Marcus Tullius Cicero</figcaption>
-    </figure>
+
+  <section class="slide" id="hubbrowse"><div>
+    <h2 class="slide-title">
+      <a href="https://github.com/github/hub/">Hub</a>
+      <div class="slide-tagline">open GitHub</div>
+    </h2>
+    <pre><code class="language-bash">git browse</code></pre>
   </div></section>
-  <section class="slide"><div>
-    <h2>Code Samples</h2>
-    <pre>
-      <code>&lt;!DOCTYPE html&gt;</code>
-      <code>&lt;html lang="en"&gt;</code>
-      <code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-      <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-      <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-      <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-      <code><mark>&lt;/head&gt;</mark></code>
-    </pre>
-  </div></section>
-  <section class="slide"><div>
-    <h2>Even Tables</h2>
-    <table>
-    <tr>
-      <th scope="col">Locavore</th>
-      <th>Umami</th>
-      <th>Helvetica</th>
-      <th>Vegan</th>
-    </tr>
-    <tr>
-      <th scope="row">Fingerstache</th>
-      <td>Kale</td>
-      <td>Chips</td>
-      <td>Keytar</td>
-    </tr>
-    <tr>
-      <th scope="row">Sriracha</th>
-      <td>Gluten-free</td>
-      <td>Ennui</td>
-      <td>Keffiyeh</td>
-    </tr>
-    <tr>
-      <th scope="row">Thundercats</th>
-      <td>Jean</td>
-      <td>Shorts</td>
-      <td>Biodiesel</td>
-    </tr>
-    <tr>
-      <th scope="row">Terry</th>
-      <td>Richardson</td>
-      <td>Swag</td>
-      <td>Blog</td>
-    </tr>
-    </table>
-    <p>It’s good to have information organized.</p>
-  </div></section>
-  <section class="slide cover" id="Picture"><div>
-    <h2>Pictures</h2>
-    <img src="pictures/picture.jpg" alt="">
+
+  <section class="slide shout cover" id="yourown"><div>
+    <h2>Build your <span class="regular">own</span></h2>
+    <img src="images/yourown2.svg" alt="">
     <style>
-      #Picture h2 {
-        color:#FFF;
-        }
+      #yourown {
+        background-color: #fff;
+      }
     </style>
   </div></section>
-  <section class="slide shout"><div>
-    <h2>You can even shout this way</h2>
-  </div></section>
-  <section class="slide"><div>
-    <h2>Inner Navigation</h2>
-    <ol>
-      <li>Lets you reveal list items one by one</li>
-      <li class="next">To keep some key points</li>
-      <li class="next">In secret from audience</li>
-      <li class="next">But it will work only once</li>
-      <li class="next">Nobody wants to see the same joke twice</li>
-    </ol>
-  </div></section>
+
   <section class="slide shout" id="final"><div>
     <h2><a href="https://twitter.com/denbuzze">@denbuzze</a></h2>
     <style>

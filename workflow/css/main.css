@@ -90,8 +90,23 @@ body {
 .slide .slide-title {
   font: 70px/1 'roboto_slablight',sans-serif
 }
+.slide .slide-title-blue {
+  color: #2980B9;
+}
+.slide .slide-title-green a {
+  color: #27AE60;
+}
 .slide .slide-tagline {
-  color: #ccc;
+  color: #999;
   font-size: 25px;
   margin-top: 5px;
+}
+
+.arrow {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.small {
+  font-size: 0.8em;
 }

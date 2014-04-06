@@ -19,7 +19,6 @@ Everything commandline
  - Create PRs
  - Create repo
 
-
 Hub Install
 git clone schacon/ticgit
 git clone git://github.com/schacon/ticgit.git
@@ -37,6 +36,29 @@ Minify / Concatenate & Hash your files
 
 Aliases
 Atom
+Build tool
+
+
+Grunt / Gulp
+
+Compile: SASS / CoffeeScript
+Optimize images
+
+http://slid.es/contra/gulp
+Grunt vs. Gulp
+Plugins do multiple things
+  Want a banner? Use the javascript minifier
+  Uglify - both minify & rename
+Headache of temp files/folders due to bad flow control
+
+http://travismaynard.com/writing/no-need-to-grunt-take-a-gulp-of-fresh-air
+With Gulp your build file is code, not config
+  gulp follows the CommonJS spec,
+You use standard libraries to do things
+Plugins are simple and do one thing - most are a ~20 line function
+Tasks are executed with maximum concurrency
+I/O works the way you picture it
+
 Travis integration
 
 Contributing.md file
@@ -44,3 +66,9 @@ Contributing.md file
 Design
 8bit background - squares everywhere
 
+
+! Run your build remotely
+
+
+
+Nowadays it's not really about which tool you use, it's about which tool is right for the job
