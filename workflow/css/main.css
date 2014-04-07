@@ -90,6 +90,19 @@ body {
 .slide .slide-title {
   font: 70px/1 'roboto_slablight',sans-serif
 }
+.howestgoesusa .slide-title {
+  background: rgba(255,255,255,0.8);
+  font-size: 50px;
+  position: absolute;
+  z-index: 2;
+}
+.howestgoesusa iframe {
+  height: 640px;
+  margin-left: -120px;
+  margin-top: -70px;
+  width: 1024px;
+}
+
 .slide .slide-title-blue {
   color: #2980B9;
 }

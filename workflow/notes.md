@@ -59,6 +59,8 @@ Plugins are simple and do one thing - most are a ~20 line function
 Tasks are executed with maximum concurrency
 I/O works the way you picture it
 
+http://www.reddit.com/r/javascript/comments/1uk7we/and_just_like_that_grunt_is_out_its_all_about/cej29ig
+
 Travis integration
 
 Contributing.md file

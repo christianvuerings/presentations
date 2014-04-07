@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="howestgoesusa">
+<head>
+  <meta name="charset" content="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>#Howestgoesusa</title>
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+</head>
+<body ng-controller="MainController">
+  <div class="container">
+    <div class="slideshow" id="slideshow">
+      <ol class="slides">
+        <li ng-repeat="(key, value) in items" ng-class="{'current':($index === 0)}">
+          <div class="tiltview col">
+            <div ng-repeat="item in value">
+              <a href="{{item.link}}">
+                <img ng-src="{{item.images.low_resolution.url}}" />
+              </a>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="js/classie.js"></script>
+  <script src="js/tiltSlider.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
