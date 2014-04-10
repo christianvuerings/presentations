@@ -1,0 +1,15 @@
+{
+  "name": "howestshow",
+  "description": "Get latest #howestgoesusa instagram pictures",
+  "version": "0.0.1",
+  "repository": {
+    "git": "https://github.com/christianv/presentations.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-uglify": "~0.4.0"
+  }
+}

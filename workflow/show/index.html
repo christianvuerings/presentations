@@ -16,13 +16,11 @@
   <div class="container">
     <div class="slideshow" id="slideshow">
       <ol class="slides">
-        <li ng-repeat="(key, value) in items" ng-class="{'current':($index === 0)}">
+        <li ng-repeat="item in items" ng-class="{'current':($index === 0)}">
           <div class="tiltview col">
-            <div ng-repeat="item in value">
-              <a href="{{item.link}}">
+              <a ng-href="{{item.link}}">
                 <img ng-src="{{item.images.low_resolution.url}}" />
               </a>
-            </div>
           </div>
         </li>
       </ol>
