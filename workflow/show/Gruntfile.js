@@ -1,16 +1,16 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     concat: {
-      'dist/all.js': ['src/*.js']
+      'dist/all.js': ['src/**/*.js']
     },
     uglify: {
       'dist/all.min.js': ['dist/all.js']
     },
     jshint: {
-      files: ['gruntfile.js', 'src/*.js']
+      files: ['gruntfile.js', 'src/js/*.js']
     },
     watch: {
-      files: ['gruntfile.js', 'src/*.js'],
+      files: ['gruntfile.js', 'src/**/*.js'],
       tasks: ['jshint', 'concat', 'uglify']
     }
   });
