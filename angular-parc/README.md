@@ -1,6 +1,7 @@
 # Skydiving with AngularJS - PARC
 
 URL: https://christianv.github.io/presentations/angular-parc/
+
 Date: 2013-11-07
 
 ## Overview

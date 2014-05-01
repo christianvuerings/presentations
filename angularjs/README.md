@@ -1,6 +1,7 @@
 # Skydiving with AngularJS
 
 URL: https://christianv.github.io/presentations/angularjs/
+
 Date: 2013-10-08
 
 ## Overview

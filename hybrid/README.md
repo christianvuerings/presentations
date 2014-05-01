@@ -1,6 +1,7 @@
 # Sakai Hybrid
 
 URL: https://christianv.github.io/presentations/hybrid/
+
 Date: 2012-06-11
 
 ## Introduction
