@@ -1,3 +1,4 @@
 # UC Berkeley - Campus API
 
-Why do we want APIs on Campus?
+URL: https://christianv.github.io/presentations/campus-api/?full#cover
+Date: 2013-04-09

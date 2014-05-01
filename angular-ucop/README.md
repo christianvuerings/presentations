@@ -1,6 +1,7 @@
 # Skydiving with AngularJS - UCOP
 
-Skydiving with AngularJS - UCOP
+URL: https://christianv.github.io/presentations/angular-ucop/
+Date: 2013-11-15
 
 ## Overview
 
