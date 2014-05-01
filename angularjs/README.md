@@ -1,4 +1,4 @@
-# AngularJS
+# Skydiving with AngularJS
 
 Skydiving with AngularJS
 

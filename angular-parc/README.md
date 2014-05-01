@@ -1,4 +1,4 @@
-# AngularJS - PARC
+# Skydiving with AngularJS - PARC
 
 Skydiving with AngularJS - PARC
 

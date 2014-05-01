@@ -1,4 +1,4 @@
-# AngularJS - UCOP
+# Skydiving with AngularJS - UCOP
 
 Skydiving with AngularJS - UCOP
 
