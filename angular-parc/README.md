@@ -1,8 +1,11 @@
-AngularJS
+# AngularJS - PARC
 
-Overview
+Skydiving with AngularJS - PARC
 
-Structure
+## Overview
+
+## Structure
+
  - Overview
    - What is it?
    - AngularJS + Jquery?
@@ -15,15 +18,17 @@ Structure
  - Service / Factory
  - Directive
 
-Performance
+## Performance
+
  - Avoid ng-bind-html
  - Digest cycles
  - Ng-if instead of ng-show
 
-Include
+## Include
+
  - Link
  - Resources
- 	Egghead.io
- 	AngularJS docs
- 	IRC channel
- 	Google group
+  Egghead.io
+  AngularJS docs
+  IRC channel
+  Google group

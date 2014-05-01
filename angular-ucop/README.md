@@ -1,8 +1,11 @@
-AngularJS
+# AngularJS - UCOP
 
-Overview
+Skydiving with AngularJS - UCOP
 
-Structure
+## Overview
+
+## Structure
+
  - Overview
    - What is it?
    - AngularJS + Jquery?
@@ -15,12 +18,14 @@ Structure
  - Service / Factory
  - Directive
 
-Performance
+## Performance
+
  - Avoid ng-bind-html
  - Digest cycles
  - Ng-if instead of ng-show
 
-Include
+## Include
+
  - Link
  - Resources
  	Egghead.io
