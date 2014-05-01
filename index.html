@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="presentations">
+<head>
+  <meta charset="utf-8">
+  <title>Christian Vuerings - Presentations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #2f3135;
+      color: #fff;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+</head>
+<body ng-controller="mainController">
+  <h1>Christian Vuerings - Presentations</h1>
+  <ul>
+    <li ng-repeat="presentation in presentations">{{presentation.id}} - {{presentation.title}}
+      <iframe ng-src="{{presentation.url}}" height="500px" width="100%"></iframe>
+    </li>
+  </ul>
+  <script type="text/javascript">
+    (function() {
+
+      var presentations = angular.module('presentations', []);
+
+      presentations.factory('presentationsFactory', function($http) {
+        var url = 'https://spreadsheets.google.com/feeds/list/1SKek3eOKowbhdthJtFOQFbb-zwmz71bXN2MaXeOZhqg/0/public/basic?alt=json&callback=JSON_CALLBACK';
+        var get = function() {
+          return $http.jsonp(url);
+        };
+        return {
+          get: get
+        };
+      });
+
+      presentations.controller('mainController', function(presentationsFactory, $sce, $scope) {
+        presentationsFactory.get().then(function(xhr) {
+          var data = xhr.data;
+
+          var entries = data.feed.entry;
+
+
+          var presentations = [];
+          entries.forEach(function(element) {
+            var id = element.title.$t;
+            presentations.push({
+              id: id,
+              title: element.content.$t.replace('description: ', ''),
+              url: $sce.trustAsResourceUrl('https://christianv.github.io/presentations/' + id + '/?full#cover')
+            });
+          });
+          $scope.presentations = presentations;
+          console.log(presentations);
+        });
+      });
+
+
+    })();
+  </script>
+</body>
+</html>
+
