@@ -21,14 +21,42 @@
     img {
       max-width: 100%;
     }
+    .visuallyhidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin: 40px 20px;
+      text-align: center;
+    }
+    h1 .small {
+      font-size: 0.5em;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 30px;
+      }
+    }
+    ul li {
+      margin-bottom: 40px;
+      text-align: center;
+    }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 </head>
 <body ng-controller="mainController">
-  <h1>Christian Vuerings - Presentations</h1>
+  <h1>Presentations <br /><div class="small">by Christian Vuerings</div></h1>
   <ul>
-    <li ng-repeat="presentation in presentations">
-      <h2>{{presentation.title}}</h2>
+    <li ng-repeat="presentation in presentations | orderBy:'date':true">
+      <h2 class="visuallyhidden">{{presentation.title}}</h2>
       <a href="{{presentation.url}}">
         <img ng-src="{{presentation.img}}">
       </a>
@@ -55,15 +83,22 @@
 
           var entries = data.feed.entry;
 
-
           var presentations = [];
           entries.forEach(function(element) {
             var id = element.title.$t;
+
+            var mainContent = element.content.$t;
+            var mainContentSplit = mainContent.split(',');
+            var title = mainContentSplit[0].replace('description: ', '');
+            var url = mainContentSplit[2].replace(' url: ', '');
+            var date = mainContentSplit[3].replace(' date: Date: ', '').split('-');
+
             presentations.push({
+              date: new Date(date[0], parseInt(date[1], 10) - 1, date[2]),
               id: id,
               img: 'https://raw.githubusercontent.com/christianv/presentations/gh-pages/' + id + '/cover.png',
-              title: element.content.$t.replace('description: ', ''),
-              url: $sce.trustAsResourceUrl('https://christianv.github.io/presentations/' + id)
+              title: title,
+              url: $sce.trustAsResourceUrl(url)
             });
           });
           $scope.presentations = presentations;
