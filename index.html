@@ -68,7 +68,7 @@
       var presentations = angular.module('presentations', []);
 
       presentations.factory('presentationsFactory', function($http) {
-        var url = 'https://spreadsheets.google.com/feeds/list/1SKek3eOKowbhdthJtFOQFbb-zwmz71bXN2MaXeOZhqg/0/public/basic?alt=json&callback=JSON_CALLBACK';
+        var url = 'https://spreadsheets.google.com/feeds/list/1SKek3eOKowbhdthJtFOQFbb-zwmz71bXN2MaXeOZhqg/default/public/basic?alt=json&callback=JSON_CALLBACK';
         var get = function() {
           return $http.jsonp(url);
         };
