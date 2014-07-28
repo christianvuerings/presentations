@@ -1,5 +1,5 @@
-# Optimize Your Front-end Workflow
+# CalCentral - Make Your Data Rock
 
-URL: https://christianv.github.io/presentations/workflow/?full#cover
+URL: https://christianv.github.io/calcentral-rock/workflow/?full#cover
 
-Date: 2014-04-04
+Date: 2014-07-27
