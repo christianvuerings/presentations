@@ -1,5 +1,9 @@
 github.com/ets-berkeley-edu
 
+* Before project started - lots of students issues finding their way around the web.
+* Steps of integration
+* Get that data
+
 Go Mobile
 
 Back-end: Ruby on Rails
