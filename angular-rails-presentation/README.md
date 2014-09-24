@@ -2,6 +2,12 @@
 
 Presentation for HTML5DevConf Autumn 2014 (October 20 & 21, 2014)
 
+## Install
+
+```
+npm install
+```
+
 ## Outline
 
 * Intro
