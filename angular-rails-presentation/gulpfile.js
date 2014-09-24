@@ -65,7 +65,7 @@ gulp.task('index', function() {
   });
 
   return target.pipe(inject(sources, {
-    relative: true
+    addRootSlash: false
   }))
   .pipe(gulp.dest('.'));
 });
