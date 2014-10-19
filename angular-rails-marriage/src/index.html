@@ -22,7 +22,7 @@
     <h1>Angular and Rails - Marriage or Divorce?</h1>
     <p>by <a href="http://denbuzze.com">@denbuzze</a></p>
   </header>
-  <section class="slide intro"><div>
+  <section class="slide intro" id="intro"><div>
     <div class="intro-headers">
       <h2>Angular<br/>&amp;<br/>Rails</h2>
       <h3>Marriage or Divorce?</h3>
@@ -53,13 +53,6 @@
       width: 100%;
       height: 100%;
     }
-    .intro h2 {
-      color: #fff;
-      font-size: 100px;
-    }
-    .intro h3 {
-      font-size: 60px;
-    }
     .intro-headers {
       margin-top: 60px;
     }
@@ -79,10 +72,216 @@
     }
     </style>
   </div></section>
-  <section class="slide cover"><div>
-
+  <section class="slide slide-blue" id="story"><div>
+    <h2>Our Story</h2>
+    <style>
+    #story {
+      text-align: center;
+    }
+    #story h2 {
+      color: #fff;
+      margin-top: 150px
+    }
+    </style>
   </div></section>
-  <section class="slide outro"><div>
+  <section class="slide slide-blue" id="options"><div>
+    <img src="build/img/ring.svg" width="300" alt="wedding ring" /><h2>or not?</h2>
+    <style>
+    #options {
+      text-align: center;
+    }
+    #options h2 {
+      margin-top: 150px;
+      text-align: left;
+    }
+    #options img {
+      margin-left: 100px;
+      margin-top: 20px;
+      float: left;
+    }
+    </style>
+  </div></section>
+  <section class="slide slide-blue" id="marry"><div>
+    <h2><span class="text-light">#1</span> Marriage</h2>
+    <style>
+    #marry h2 {
+      margin-top: 150px;
+    }
+    </style>
+  </div></section>
+  <section class="slide notes slide-blue" id="marrypros"><div>
+    <h2><span class="text-light">#1</span> Rails asset pipeline: pros</h2>
+    <ul>
+      <li>Build in</li>
+      <li>Less dependencies</li>
+      <li>Supported gems</li>
+    </ul>
+  </div></section>
+
+  <section class="slide notes slide-blue" id="marryroutes"><div>
+    <h2><span class="text-light">#1</span> Rails: set up routes</h2>
+
+    <h3>When using html5Mode</h3>
+
+    <pre><code class="language-bash"># config/routes.rb (last line)
+get '/*url' => 'bootstrap#index'</code></pre>
+  </div></section>
+
+  <section class="slide notes slide-blue" id="marrydevtime"><div>
+    <h2><span class="text-light">#1</span> Rails: improve dev mode</h2>
+
+    <h3>Combine CSS &amp; JS requests</h3>
+
+    <pre><code class="language-bash"># config/development.rb
+config.assets.debug = false</code></pre>
+  </div></section>
+  <section class="slide notes slide-blue" id="marrydevtime2"><div>
+    <h2><span class="text-light">#1</span> Rails: improve dev mode</h2>
+
+    <h3>Combine CSS &amp; JS requests</h3>
+
+    <ul>
+      <li>214 => 24 requests</li>
+      <li>Page load time: 13s => 2.5s</li>
+    </ul>
+  </div></section>
+  <section class="slide notes slide-blue" id="gem-intro"><div>
+    <h2><span class="text-light">#1</span> Rails: dependencies as gems</h2>
+
+    <h3>Don't copy/paste libraries into your code</h3>
+
+    <ul>
+      <li>More modular</li>
+      <li>More maintainable (even by others)</li>
+    </ul>
+  </div></section>
+  <section class="slide notes slide-blue" id="gem-angular"><div>
+    <h2><span class="text-light">#1</span> Gem: angular-gem</h2>
+
+    <h3>Angular bundled as a gem</h3>
+
+    <pre><code class="language-ruby">gem 'angular-gem', '~> 1.3.0'</code></pre>
+  </div></section>
+  <section class="slide notes slide-blue" id="gem-angular2"><div>
+    <h2><span class="text-light">#1</span> Gem: angular-gem</h2>
+
+    <h3>Only load the necessary modules</h3>
+
+    <pre><code class="language-ruby"># application.js
+//= require angular
+//= require angular-route
+//= require angular-sanitize</code></pre>
+  </div></section>
+
+  <section class="slide notes slide-blue" id="gem-angular-templates"><div>
+    <h2><span class="text-light">#1</span> Gem: angular-rails-templates</h2>
+
+    <h3>Add templates into Angular's $templateCache</h3>
+
+    <ul>
+      <li>Automatically part of the asset pipeline</li>
+      <li>No more AJAX calls to retrieve templates</li>
+      <li>Forces clean separation (no more .erb)</li>
+    </ul>
+    <!-- Way faster loading -->
+  </div></section>
+  <section class="slide notes slide-blue" id="gem-ng-annotate"><div>
+    <h2><span class="text-light">#1</span> Gem: ngannotate-rails</h2>
+
+    <h3>Add AngularJS dependency injection annotations</h3>
+
+    <pre><code class="language-javascript">.controller('MyCtrl', function($scope) {</code></pre>
+    <img class="arrow" src="build/img/arrow.svg">
+    <pre><code class="language-javascript">.controller('MyCtrl', ['$scope', function($scope) {</code></pre>
+    <!-- Previously ngMin / Allows you to use any uglifier / minifier -->
+  </div></section>
+  <section class="slide notes slide-blue" id="gem-guard-livereload"><div>
+    <h2><span class="text-light">#1</span> Gem: guard-livereload</h2>
+
+    <h3>Reloads the browser on file changes</h3>
+
+    <ul>
+      <li>Still requires an browser extension</li>
+      <li>Currently looking for a new maintainer</li>
+    </ul>
+    <!-- Kindof works but is not an optimal solution -->
+  </div></section>
+  <section class="slide slide-green" id="divorce"><div>
+    <h2><span class="text-light">#2</span> Divorce</h2>
+    <style>
+    #divorce h2 {
+      margin-top: 150px;
+    }
+    </style>
+  </div></section>
+  <section class="slide notes slide-green" id="divorce-intro"><div>
+    <h2><span class="text-light">#2</span> Complete separation</h2>
+    <ul>
+      <li>Rails: <span class="text-thin">API</span></li>
+      <li>Angular: <span class="text-thin">everything else</span></li>
+      <li>Dependency management: <span class="text-thin">bower / npm</span></li>
+      <li>Build tools: <span class="text-thin">gulp / grunt</span></li>
+    </ul>
+    <!-- you don't really use the assets pipeline anymore -->
+  </div></section>
+  <section class="slide notes slide-green" id="divorce-pros"><div>
+    <h2><span class="text-light">#2</span> Complete separation: pros</h2>
+    <ul>
+      <li>More up to date tools</li>
+      <li>Faster compile times</li>
+      <li>Image optimization on the fly</li>
+      <!-- (builds that don't write intermediary files to disk). -->
+    </ul>
+    <!-- you don't really use the assets pipeline anymore -->
+  </div></section>
+  <section class="slide notes slide-green" id="divorce-browser-sync"><div>
+    <h2><span class="text-light">#2</span> Package: <a href="http://www.browsersync.io/">browser-sync</a></h2>
+    <ul>
+      <li>StyleSheet injection</li>
+      <li>Action sync</li>
+      <li>Runs on Windows, MacOS and Linux</li>
+    </ul>
+    <!-- stylesheet injection &  -->
+  </div></section>
+
+  <section class="slide notes slide-green" id="divorce-imagemin"><div>
+    <h2><span class="text-light">#2</span> Package: <a href="https://www.npmjs.org/package/gulp-imagemin">gulp-imagemin</a></h2>
+    <h3>Minify</h3>
+    <img src="build/img/filetypes.svg" width="800" alt="filetypes" />
+  </div></section>
+
+  <section class="slide slide-orange" id="friends"><div>
+    <h2><span class="text-light">#3</span> Let's be friends</h2>
+    <img src="build/img/hug.svg" width="332" alt="Hug" />
+    <!-- <div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div> -->
+    <style>
+    #friends img {
+      margin-left: 192px;
+    }
+    </style>
+  </div></section>
+
+  <section class="slide notes slide-orange" id="friends-intro"><div>
+    <h2><span class="text-light">#3</span> Friends</h2>
+    <ul>
+      <li>Rails: <span class="text-thin">API &amp; Asset pipeline</span></li>
+      <li>Angular: <span class="text-thin">everything else</span></li>
+      <li>Some gems depend on the assets pipeline</li>
+    </ul>
+  </div></section>
+
+  <section class="slide notes slide-orange" id="thankspage"><div>
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://gist.github.com/greypants/3590465cc1e9ad23d1c6">Decisions: The Asset Pipeline</a> <span class="text-light">by</span> <a href="https://github.com/greypants" title="Dan Tello">@greypants</a></li>
+      <li><a href="https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679">Webpack with Rails</a> <span class="text-light">by</span> <a href="https://medium.com/@fmarchan" title="Flarnie Marchan">@flarnie</a></li>
+      <li><a href="http://www.flaticon.com/">Icons</a> <span class="text-light">by</span> <a href="http://www.flaticon.com/">flaticon.com</a>
+    </ul>
+  </div></section>
+
+https://gist.github.com/greypants
+
+  <section class="slide outro" id="end"><div>
     <h2>Thank You</h2>
     <div class="container">
       <h3>
@@ -98,14 +297,25 @@
         </a>
       </h3>
     </div>
+    <div id="birds-container"></div>
     <style>
+      #birds-container {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        bottom: 0;
+      }
+      .outro h2, .outro .container {
+        position: relative;
+        z-index: 5;
+      }
       .slide.outro {
         background-color: #c1272d;
-        color: #fff;
         text-align: center;
       }
       .outro h2 {
-        color: #fff;
         font-size: 100px;
       }
       .outro h3 {
@@ -126,5 +336,13 @@
   </div></section>
   <!-- inject:js -->
   <!-- endinject -->
+  <!--
+    Sources
+    http://truongtx.me/2014/08/06/using-watchify-with-gulp-for-fast-browserify-build/
+
+    Extra
+    Browserify
+    Use Watchify - http://truongtx.me/2014/08/06/using-watchify-with-gulp-for-fast-browserify-build/
+  -->
 </body>
 </html>

@@ -55,6 +55,8 @@
         circles.push(c);
     }
     animate();
+
+    setTimeout(resize, 1);
   }
 
   // Event handling

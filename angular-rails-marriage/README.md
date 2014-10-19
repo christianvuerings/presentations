@@ -15,7 +15,10 @@ npm install
 ## Outline
 
 * Intro
-* Different approaches
+* Our Story
+  CalCentral - 8000 unique visits
+  Rails 4 and Angular 1.3
+* Different options
   * Complete separation
   * Hybrid
   * Embedded
@@ -31,5 +34,8 @@ npm install
     * livereload
   * Pros / Cons
 * Closing thoughts
+  Which one should you take? It depends, on
+    * You developer team
+    * How many front-end dependencies you have
 * Contact details / slide information
 * Questions
