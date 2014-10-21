@@ -130,7 +130,7 @@ get '/*url' => 'bootstrap#index'</code></pre>
   </div></section>
 
   <section class="slide notes slide-blue" id="marrydevtime"><div>
-    <h2><span class="text-light">#1</span> Rails: improve dev mode</h2>
+    <h2><span class="text-light">#1</span> Rails: <a href="http://guides.rubyonrails.org/asset_pipeline.html#manifest-files-and-directives#turning-debugging-off">improve dev mode</a></h2>
 
     <h3>Combine CSS &amp; JS requests</h3>
 
@@ -272,16 +272,48 @@ config.assets.debug = false</code></pre>
     </ul>
   </div></section>
 
-  <section class="slide notes slide-orange" id="thankspage"><div>
+  <section class="slide notes slide-orange" id="friends-package-rev-rails"><div>
+    <h2><span class="text-light">#3</span> Package <a href="https://github.com/joker1007/gulp-rev-rails-manifest">gulp-rev-rails-manifest</a></h2>
+    <h3>gulp-rev manifest.json - Rails assets helper</h3>
+    <pre><code class="language-javascript">{
+  "css/unicorn.css": "css/unicorn-098f6bcd.css",
+  "js/unicorn.js": "js/unicorn-273c2cin.js"
+}</code></pre>
+  </div></section>
+
+  <section class="slide notes slide-orange" id="friends-gulp-rails"><div>
+    <h2><span class="text-light">#3</span> Package <a href="https://github.com/adamcooke/gulp_rails">gulp_rails</a></h2>
+    <h3>gulp command executes when a request is made</h3>
+    <pre><code class="language-ruby">if result[1]['Content-Type'] =~ /\Atext\/html/
+  # Compiling assets with gulp
+  gulp_output = `cd frontend && gulp`
+  # Finished compiling with gulp
+end</code></pre>
+  </div></section>
+
+  <section class="slide notes slide-orange" id="friends-rails-assets"><div>
+    <h2><span class="text-light">#3</span> <a href="https://github.com/adamcooke/gulp_rails">rails-assets.org</a></h2>
+    <h3>frictionless proxy between Bundler and Bower</h3>
+    <pre><code class="language-ruby"># Gemfile
+source 'https://rails-assets.org'
+gem 'rails-assets-angular'</code></pre>
+  </div></section>
+
+  <section class="slide notes slide-orange" id="resources"><div>
     <h2>Resources</h2>
     <ul>
       <li><a href="https://gist.github.com/greypants/3590465cc1e9ad23d1c6">Decisions: The Asset Pipeline</a> <span class="text-light">by</span> <a href="https://github.com/greypants" title="Dan Tello">@greypants</a></li>
       <li><a href="https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679">Webpack with Rails</a> <span class="text-light">by</span> <a href="https://medium.com/@fmarchan" title="Flarnie Marchan">@flarnie</a></li>
-      <li><a href="http://www.flaticon.com/">Icons</a> <span class="text-light">by</span> <a href="http://www.flaticon.com/">flaticon.com</a>
+      <li><a href="http://www.flaticon.com/">Icons</a> <span class="text-light">by</span> <a href="http://www.flaticon.com/">flaticon.com</a></li>
+      <li><a href="https://nulogy.com/articles/replacing-rails-asset-pipeline">Replacing Rails Asset Pipeline</a> <span class="text-light">by</span> <a href="https://nulogy.com/authors/jack-hsu">Jack Hsu</a></li>
+      <li><a href="http://slides.com/alanpeabody/breaking-up-with-the-asset-pipeline">Breaking up with the asset pipeline</a> <span class="text-light">by</span> <a href="http://twitter.com/alanpeabody">Alan Peabody</a></li>
     </ul>
+    <style>
+    #resources ul {
+      font-size: 35px;
+    }
+    </style>
   </div></section>
-
-https://gist.github.com/greypants
 
   <section class="slide outro" id="end"><div>
     <h2>Thank You</h2>
@@ -347,10 +379,14 @@ https://gist.github.com/greypants
   <!--
     Sources
     http://truongtx.me/2014/08/06/using-watchify-with-gulp-for-fast-browserify-build/
+    http://blog.carbonfive.com/2014/05/05/roll-your-own-asset-pipeline-with-gulp/
+    http://adamcooke.io/gulp-rails/
 
     Extra
     Browserify
     Use Watchify - http://truongtx.me/2014/08/06/using-watchify-with-gulp-for-fast-browserify-build/
+    https://speakerdeck.com/sj26/rails-asset-pipeline-defunct-or-da-funk
+    http://slides.com/alanpeabody/breaking-up-with-the-asset-pipeline#/
   -->
 </body>
 </html>
