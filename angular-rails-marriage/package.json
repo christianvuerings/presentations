@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/christianv/presentations/tree/gh-pages/angular-rails-presentation"
+    "url": "https://github.com/christianvuerings/presentations/tree/gh-pages/angular-rails-presentation"
   },
   "keywords": [
     "AngularJS",

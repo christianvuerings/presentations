@@ -3,7 +3,7 @@
   "description": "Get latest #howestgoesusa instagram pictures",
   "version": "0.0.1",
   "repository": {
-    "git": "https://github.com/christianv/presentations.git"
+    "git": "https://github.com/christianvuerings/presentations.git"
   },
   "devDependencies": {
     "grunt": "~0.4.4",

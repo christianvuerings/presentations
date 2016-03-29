@@ -56,7 +56,7 @@
     list:[
       {
         service: <span class="text">&quot;github&quot;</span>,
-        user: <span class="text">&quot;christianv&quot;</span>
+        user: <span class="text">&quot;christianvuerings&quot;</span>
       }
     ]
   });
@@ -366,7 +366,7 @@
     this.setupTouchEvents();
     this.onresize();
   }
-  
+
   Dz.setupParams = function() {
     var p = window.location.search.substr(1).split('&');
     p.forEach(function(e, i, a) {
@@ -628,7 +628,7 @@
     }
     return next;
   }
-  
+
   Dz.postMsg = function(aWin, aMsg) { // [arg0, [arg1...]]
     aMsg = [aMsg];
     for (var i = 2; i < arguments.length; i++)
@@ -649,7 +649,7 @@
     Function.prototype.bind = function (oThis) {
 
       // closest thing possible to the ECMAScript 5 internal IsCallable
-      // function 
+      // function
       if (typeof this !== "function")
       throw new TypeError(
         "Function.prototype.bind - what is trying to be fBound is not callable"

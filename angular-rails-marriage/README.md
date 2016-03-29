@@ -1,6 +1,6 @@
 # Angular & Rails: Marriage or Divorce?
 
-URL: https://christianv.github.io/presentations/angular-rails-marriage/
+URL: https://christianvuerings.github.io/presentations/angular-rails-marriage/
 
 Date: 2014-10-19
 
