@@ -1,0 +1,47 @@
+{
+  "name": "shower-ribbon",
+  "description": "Ribbon theme for Shower HTML presentation engine",
+  "version": "2.0.4",
+  "author": {
+    "name": "Vadim Makeev",
+    "url": "http://pepelsbey.net/"
+  },
+  "homepage": "https://github.com/shower/ribbon",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shower/ribbon.git"
+  },
+  "bugs": {
+    "url": "http://github.com/shower/shower/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "shower",
+    "presentation",
+    "ribbon",
+    "theme"
+  ],
+  "files": [
+    "docs/**",
+    "fonts/**",
+    "images/**",
+    "pictures/**",
+    "styles/*.css",
+    "index.html",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csso": "^1.1.0",
+    "gulp-header": "^1.7.1",
+    "gulp-sass": "^2.2.0"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "styles": "gulp styles",
+    "prepublish": "npm run styles"
+  }
+}
