@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.slide {
+	font-family: 'Montserrat';
+	h2 {
+		font-family: 'Montserrat';
+	}
+}
+.slide-no-padding {
+	padding: 0;
+}
+.slide-image {
+	background-color: #000;
+}
+.slide-image:before,
+.slide-image:after {
+	background-size: cover;
+	content: " ";
+    height: 100%;
+	left: 0;
+	margin: 0;
+    position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.intro {
+	background: linear-gradient(to top, #000 1px, #fff 1.5px) repeat-x;
+
+	.css-in-2016 {
+	    display: block;
+	    font: 5em 'Montserrat';
+	    width: 960px;
+	    height: 200px;
+	    margin: 80px auto 0;
+	}
+
+	.text-copy {
+	    fill: none;
+	    stroke: #000;
+	    stroke-dasharray: 30% 45%;
+	    stroke-width: 5px;
+	    stroke-dashoffset: 0%;
+	    animation: stroke-offset 6s infinite linear;
+	}
+
+	.text-copy:nth-child(1){
+		stroke: #000;
+		animation-delay: -1s;
+	}
+
+	.text-copy:nth-child(2){
+		stroke: #BD0034;
+		animation-delay: -2s;
+	}
+
+	.text-copy:nth-child(3){
+		stroke: #FDB731;
+		animation-delay: -3s;
+	}
+
+	@keyframes stroke-offset{
+		100% {stroke-dashoffset: -75%;}
+	}
+
+	.beyond {
+		display: block;
+		font: 2.4em 'Montserrat';
+		margin: 0 auto;
+		width: 960px;
+	    height: 200px;
+	}
+	.text-copy2 {
+	    fill: none;
+	    stroke: #000;
+	    stroke-width: 2.5px;
+	}
+
+	.link {
+		background: #000;
+		color: #fff;
+		margin-top: 70px;
+		font-family: 'Montserrat';
+		font-weight: 200;
+		font-size: 1.2em;
+		padding: 15px;
+		text-align: center;
+		a {
+			color: #fff;
+			background: linear-gradient(to top,currentColor 1.5px,transparent 1.5px) repeat-x;
+		}
+	}
+}
+
+.slide-about-me {
+	color: #fff;
+	text-align: right;
+	font-size: 1.2em;
+	h2 {
+		color: #fff;
+		font-size: 2.2em
+	}
+	a {
+		color: #fff;
+	}
+	.twitter-link {
+		margin-top: 34px;
+	}
+}
+.slide-about-me:before {
+	background-image: url(../images/css2016-sailboat.jpg);
+}
+.slide-about-me:after {
+	background-image: linear-gradient(260deg, #29519e 0%, #94eced 100%);
+	content: " ";
+	opacity: 0.8;
+}
