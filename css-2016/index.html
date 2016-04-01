@@ -36,8 +36,8 @@
 		</svg>
 		<div class="link">by <a href="http://christianvuerings.com">Christian Vuerings</a></div>
 	</section>
-	<section class="slide slide-image slide-about-me">
-		<h2>About Me</h2>
+	<section class="slide slide-image slide-about-me hide-opacity slide-text-right">
+		<h2>Who's this guy?</h2>
 
 		<div>Front-end Developer 🤓</div>
 		<div>4.5 years in 🇺🇸</div>
@@ -45,17 +45,106 @@
 		<div>💛 to ⛵</div>
 		<div class="twitter-link"><a href="https://twitter.com/christianvuer">@christianvuer</a> 🐦</div>
 	</section>
-	<section class="slide">
-		<h2>Quotes</h2>
-		<blockquote>
-			<p>Flannel bicycle rights locavore selfies skateboard. Authentic fanny pack paleo four loko bespoke. Artisan tattooed chia XOXO ennui, lomo disrupt 8-bit art party Tumblr scenester.</p>
-		</blockquote>
-		<figure>
-			<blockquote>
-				<p>Post-ironic fashion axe flexitarian, Tonx narwhal messenger bag Tumblr. Portland gentrify deep v kale chips literally.</p>
-			</blockquote>
-			<figcaption>Yours Truly</figcaption>
-		</figure>
+
+	<section class="slide slide-practices slide-green slide-text-right">
+		<h2>CSS Best Practices &amp; Trends</h2>
+
+		<div>Build Tools</div>
+		<div>Critical CSS</div>
+		<div>Lint Tools</div>
+		<div>SVG</div>
+	</section>
+
+	<section class="slide slide-green">
+		<h2 class="p-flex">
+			<div>
+				Build Tools -
+			</div>
+			<div>
+				<img src="images/browser-sync.svg" alt="" width="300px" style="margin-left: 25px" />
+			</div>
+		</h2>
+
+		<div>
+			<img src="images/browsersync-animated-scroll.gif" class="p-image" />
+		</div>
+	</section>
+
+	<section class="slide slide-green">
+		<h2 class="p-flex">
+			<div>
+				Build Tools -
+			</div>
+			<div>
+				<img src="images/browser-sync.svg" alt="" width="300px" style="margin-left: 25px" />
+			</div>
+		</h2>
+
+		<div>
+			<video src="videos/browsersync.mov" autoplay loop="true" class="p-video"></video>
+		</div>
+	</section>
+
+
+	<section class="slide slide-green slide-code">
+		<h2 class="p-flex">
+			<div>
+				Build Tools -
+			</div>
+			<div>
+				<img src="images/browser-sync.svg" alt="" width="300px" style="margin-left: 25px" />
+			</div>
+		</h2>
+
+		<div class="">
+			<div><h3>Gulpfile.js</h3>
+<pre data-line="6"><code class="language-js">// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+  return gulp.src("app/scss/*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("app/css"))
+    .pipe(browserSync.stream());
+});</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-image slide-use-today slide-text-right">
+		<h2>Use future CSS features today!</h2>
+
+		<div class="p-flex p-flex-align-items-center">
+			<div>
+				<img src="images/cssnext.svg" alt="" height="80px" />
+			</div>
+			<div class="p-text-padding p-text-big p-light">includes</div>
+			<div>
+				<img src="images/autoprefixer-color.svg" alt="" height="80px" />
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-orange slide-code">
+		<h2>CSS Custom Properties</h2>
+
+		<div class="p-flex p-flex-code">
+			<div><h3>input.css</h3>
+<pre><code class="language-css">/* custom properties */
+:root {
+  --fontSize: 1rem;
+}
+body {
+  font-size: var(--fontSize);
+}</code></pre>
+			</div>
+
+			<div><h3>output.css</h3>
+<pre><code class="language-css">/* custom properties */
+body {
+  font-size: 16px;
+  font-size: 1rem;
+}</code></pre>
+			</div>
+		</div>
 	</section>
 	<section class="slide">
 		<h2>Nested Lists</h2>
@@ -329,6 +418,7 @@
 		</ol>
 		<p class="next">Before they sold out master</p>
 	</section>
+	<script src="scripts/prism.js"></script>
 	<script src="scripts/shower.min.js"></script>
 </body>
 </html>
