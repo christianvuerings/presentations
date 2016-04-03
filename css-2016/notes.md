@@ -13,10 +13,11 @@ You can find me on twitter at @christianvuer and I'll be posting the slides afte
 
 Current CSS Best Practices & Trends
  - Build tools - BrowserSync (Live Inject)
+    - If you use Webpack - use webpack-dev-server or a BrowserSync plug-in
  - Critical CSS / AMP (open source)
  - Lint tools - sass-lint / scss-lint / stylehint
  - SVG's instead of PNG's / icon fonts
- -
+    - SVG still one of the most underused items on the web
 
 CSS Layout
  - Flex / Grid / Columns
@@ -39,8 +40,9 @@ Current trends
 * Hello Bob / everybody - http://codepen.io/yoannhel/pen/sJpDj
 * Talented Designer / Coder - http://codepen.io/indyplanets/pen/EamaYg
 
-## SVG Animations
+## Other Animations
 
+* CSS3 background Animation - http://codepen.io/vubon/pen/bdmvbY
 * Support all devices - http://codepen.io/chrisgannon/pen/vGgqoL
 
 
@@ -51,8 +53,13 @@ Current trends
 ## Images
 
 * Modestas Urbonas: Golden Gate - https://stocksnap.io/photo/S4LGAIFQ7B
+* San Francisco: Golden Gate - https://stocksnap.io/search/san+francisco
 * AJ Montpetit: Clock - https://stocksnap.io/photo/QMT31TBG60
 
 ## Examples
 
 * Text Animation: Montserrat - http://codepen.io/ClaireLarsen/pen/XmVyVX
+
+# TODO
+
+* Add more links to the presentation (and fix styling)

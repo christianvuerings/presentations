@@ -9,6 +9,9 @@
 		font-family: 'Montserrat';
 		font-size: 2em;
 	}
+	a {
+		color: #fff;
+	}
 }
 .slide-no-padding {
 	padding: 0;
@@ -34,6 +37,9 @@
 	z-index: -1;
 }
 
+.slide-blue {
+	background-color: #2C48C7;
+}
 .slide-green {
 	background-color: #21574E;
 }
@@ -53,6 +59,19 @@
 .p-flex-align-items-center {
 	align-items: center;
 }
+.p-flex-align-self-center {
+	align-self: center;
+}
+.p-flex-space-30 {
+	> div {
+		&:not(:first-child) {
+		  margin-left: 30px;
+		}
+		&:not(:last-child) {
+		  margin-right: 30px;
+		}
+	}
+}
 .p-flex-code {
 	margin-left: -80px;
 	margin-right: -80px;
@@ -69,18 +88,40 @@
 .p-light {
 	opacity: 0.8;
 }
+.p-subheader {
+	margin-top: -15px;
+	font-size: 0.8em;
+}
+.p-table-thead-center {
+	thead th {
+		text-align: center;
+	}
+}
 .p-text-big {
 	font-size: 1.4em;
 }
+.p-text-center {
+	text-align: center;
+}
 .p-text-padding {
 	padding: 30px;
+}
+.p-td-text-top-img {
+	text-align: center;
+	img {
+		vertical-align: text-top;
+	}
 }
 .p-video {
     margin-left: -100px;
     margin-right: -100px;
 	max-width: calc(100% + 200px);
 }
-
+.p-video-120 {
+    margin-left: -60px;
+    margin-right: -60px;
+    max-width: calc(100% + 120px);
+}
 
 .intro {
 	background: linear-gradient(to top, #000 1px, #fff 1.5px) repeat-x;
@@ -144,16 +185,12 @@
 		padding: 15px;
 		text-align: center;
 		a {
-			color: #fff;
 			background: linear-gradient(to top,currentColor 1.5px,transparent 1.5px) repeat-x;
 		}
 	}
 }
 
 .slide-about-me {
-	a {
-		color: #fff;
-	}
 	.twitter-link {
 		margin-top: 34px;
 	}
@@ -181,27 +218,27 @@
 	text-align: right;
 }
 
+.slide-list {
+	ul {
+		margin-left: 30px;
+		opacity: 0.9;
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-//
-// .slide-about-me {
-// 	div {
-// 		// background: #000;
-// 		// padding: 0 30px;
-//
-// 		transition: opacity 0.3s;
-// 		opacity: 1;
-// 		&:hover {
-// 			opacity: 0;
-// 		}
-// 	}
+.slide-outro {
+	h2 {
+		margin-top: 300px;
+	}
+	&:before {
+		background-image: url(../images/san-francisco.jpg);
+	}
+	&:after {
+		background-image: linear-gradient(260deg, #29519e 0%, #94eced 100%);
+		opacity: 0.2;
+	}
+}
+// .slide-about-me
+// .slide-about-me:after {
+// 	background-image: linear-gradient(260deg, #29519e 0%, #94eced 100%);
+// 	opacity: 0.8;
 // }

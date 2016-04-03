@@ -31,7 +31,7 @@ table {
 
 	tr:not(:last-of-type) {
 		> * {
-			@include underline($grey-line, 0.055);
+			border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 			}
 		}
 
