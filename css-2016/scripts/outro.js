@@ -50,9 +50,6 @@ Animate.prototype.init = function(){
 
   // Setup canvas
   var cont = document.querySelectorAll('.slide-outro')[0];
-  // console.log(cont);
-  // this.canvas.width = 1200;
-  // this.canvas.height = 900;
   this.canvas.width = 1100;
   this.canvas.height = 900;
 
@@ -320,7 +317,23 @@ Circle.prototype.draw = function() {
 };
 
 // Get the balls rolling
-new Animate(document.getElementById('outroanim'));
+var check = function() {
+  if (document.querySelector('.slide-image.slide-outro.active') && !document.getElementById('outroanim')) {
+    // console.log('start animation!', document.getElementById('outroanim'));
+
+    var outroanim = document.createElement('canvas');
+    outroanim.setAttribute('id', 'outroanim');
+    document.getElementById('outroanim-container').appendChild(outroanim);
+    new Animate(document.getElementById('outroanim'));
+} else if (!document.querySelector('.slide-image.slide-outro.active') && document.getElementById('outroanim')) {
+    // console.log('remove animation container');
+    var outroanim = document.getElementById('outroanim');
+    var outroanimContainer = document.getElementById('outroanim-container');
+    outroanimContainer.removeChild(outroanim);
+}
+}
+var test = window.setInterval(check, 500);
+
 
 
 /**

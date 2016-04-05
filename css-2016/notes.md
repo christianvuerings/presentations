@@ -15,9 +15,14 @@ Current CSS Best Practices & Trends
  - Build tools - BrowserSync (Live Inject)
     - If you use Webpack - use webpack-dev-server or a BrowserSync plug-in
  - Critical CSS / AMP (open source)
+    - Other nice plug-in - UnCSS - remove the unused rules
  - Lint tools - sass-lint / scss-lint / stylehint
  - SVG's instead of PNG's / icon fonts
     - SVG still one of the most underused items on the web
+ - CSS Modules
+    - CSS is global by default
+    - Specificity rules are hard to remember
+    - Under the hood, this uses compiles to ICSS - Interoperable CSS - which makes the interaction between CSS & JavaScript possible
 
 CSS Layout
  - Flex / Grid / Columns

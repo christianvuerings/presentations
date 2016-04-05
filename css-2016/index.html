@@ -53,6 +53,7 @@
 		<div>Critical CSS</div>
 		<div>Lint Tools</div>
 		<div>SVG</div>
+		<div>CSS Modules</div>
 	</section>
 
 	<section class="slide slide-green">
@@ -281,6 +282,130 @@ gulp.task('sass', function() {
 		</div>
 	</section>
 
+	<section class="slide slide-green slide-list">
+		<h2 class="p-flex">
+			<div>
+				CSS Modules
+			</div>
+		</h2>
+
+		<div class="p-flex p-flex-space-30">
+			<div>
+				<ul>
+	        		<li>Scoped locally</li>
+					<li>Explicit dependencies</li>
+					<li>Makes CSS modular &amp; reusable</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-green slide-code">
+		<h2>
+			<div>
+				CSS Modules / Example
+			</div>
+		</h2>
+
+		<div class="p-flex p-flex-code p-code-small">
+			<div><h3>components/button.css</h3>
+<pre><code class="language-css">.normal { /* ... */ }
+.disabled { /* ... */ }
+.error { /* ... */ }</code></pre>
+			</div>
+
+			<div><h3>components/button.js</h3>
+<pre><code class="language-jsx">import styles from './submit-button.css';
+buttonElem.outerHTML= `
+  &lt;button class=${styles.normal}&gt;Submit&lt;/button&gt;
+`;</code></pre>
+			</div>
+		</div>
+		<div class="p-flex p-flex-code p-code-small">
+			<div><h3>index.html</h3>
+<pre><code class="language-html">&lt;button class=&quot;components_button__normal__abc5436&quot;&gt;
+  Submit
+&lt;/button&gt;</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-green slide-code">
+		<h2>
+			<div>
+				CSS Modules / Composes
+			</div>
+		</h2>
+
+		<div class="p-code-small"><h3>components/button.css</h3>
+<pre><code class="language-css">.common { /* font-size, border-radius */ }
+.normal { composes: common; /* blue color */ }
+.error { composes: common; /* red color */ }</code></pre>
+		</div>
+		<div class="p-code-small"><h3>index.html</h3>
+<pre><code class="language-html">&lt;button class=&quot;components_button__common__abc5436
+		       components_button__normal__def6547&quot;&gt;
+  Submit
+&lt;/button&gt;</code></pre>
+		</div>
+	</section>
+
+	<section class="slide slide-green slide-code">
+		<h2>
+			<div>
+				CSS Modules / Composes
+			</div>
+		</h2>
+
+		<div><h3>components/button.js</h3>
+<pre><code class="language-jsx">import styles from './submit-button.css';
+
+buttonElem.outerHTML= `
+  &lt;button class=${styles.normal}&gt;Submit&lt;/button&gt;
+`;</code></pre>
+		</div>
+	</section>
+
+	<section class="slide slide-green slide-code">
+		<h2>
+			<div>
+				CSS Modules / Share between files
+			</div>
+		</h2>
+
+		<div class="p-flex p-flex-code">
+			<div><h3>shared/colors.css</h3>
+<pre><code class="language-css">.primary {
+  color: #720;
+}
+.secondary {
+  color: #777;
+}</code></pre>
+			</div>
+
+			<div><h3>components/button.css</h3>
+<pre data-line="4"><code class="language-css">.common { /* ... */ }
+.normal {
+  composes: common;
+  composes: primary from "../shared/colors.css";
+}</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-green slide-list">
+		<h2>CSS Modules / Resources</h2>
+
+		<ul>
+			<li>
+				<a href="http://glenmaddern.com/articles/css-modules">Glen Maddern - CSS Modules</a>
+			</li>
+			<li>
+				<a href="http://glenmaddern.com/articles/interoperable-css">Glen Maddern - Interoperable CSS</a>
+			</li>
+		</ul>
+	</section>
+
 	<section class="slide slide-blue">
 		<h2>CSS Layouts</h2>
 
@@ -423,8 +548,18 @@ gulp.task('sass', function() {
 		</div>
 	</section>
 
+	<section class="slide slide-orange">
+		<h2>CSS4</h2>
+
+		<div>Use It Today...</div>
+		<div>Custom Properties</div>
+		<div>Custom Media Queries</div>
+		<div>Custom Selectors</div>
+		<div>Color Function</div>
+	</section>
+
 	<section class="slide slide-image slide-use-today slide-text-right">
-		<h2>Use future CSS features today!</h2>
+		<h2>Use these CSS4 features today!</h2>
 
 		<div class="p-flex p-flex-align-items-center">
 			<div>
@@ -438,12 +573,32 @@ gulp.task('sass', function() {
 	</section>
 
 	<section class="slide slide-orange slide-code">
-		<h2><a href="https://drafts.csswg.org/css-variables/">CSS Custom Properties</a></h2>
+		<h2><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></h2>
 
 		<div class="p-flex p-flex-code">
 			<div><h3>input.css</h3>
-<pre><code class="language-css">/* custom properties */
-:root {
+<pre><code class="language-css">div {
+  display: flex;
+}</code></pre>
+			</div>
+
+			<div><h3>output.css</h3>
+<pre><code class="language-css">div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-orange slide-code">
+		<h2><a href="https://drafts.csswg.org/css-variables/">Custom Properties</a></h2>
+
+		<div class="p-flex p-flex-code">
+			<div><h3>input.css</h3>
+<pre><code class="language-css">:root {
   --fontSize: 1rem;
 }
 body {
@@ -452,10 +607,89 @@ body {
 			</div>
 
 			<div><h3>output.css</h3>
-<pre><code class="language-css">/* custom properties */
-body {
+<pre><code class="language-css">body {
   font-size: 16px;
   font-size: 1rem;
+}</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-orange slide-code">
+		<h2><a href="https://drafts.csswg.org/mediaqueries/">Custom Media Queries</a></h2>
+
+		<div class="p-flex p-flex-code">
+			<div><h3>input.css</h3>
+<pre><code class="language-css">@custom-media --viewport-medium (
+  width <= 50rem
+);
+@media (--viewport-medium) {
+  body {
+	font-size: 1.2em;
+  }
+}</code></pre>
+			</div>
+
+			<div><h3>output.css</h3>
+<pre><code class="language-css">@media (max-width: 50rem) {
+  body {
+    font-size: 1.2em;
+  }
+}</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-orange slide-code">
+		<h2><a href="https://drafts.csswg.org/selectors/">Custom Selectors</a></h2>
+
+		<div class="p-flex p-flex-code">
+			<div><h3>input.css</h3>
+<pre><code class="language-css">@custom-selector :--heading h1, h2, h3
+
+:--heading { margin-top: 0 }</code></pre>
+			</div>
+
+			<div><h3>output.css</h3>
+<pre><code class="language-css">h1,
+h2,
+h3 { margin-top: 0 }</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-orange slide-code">
+		<h2><a href="https://drafts.csswg.org/css-color/">Color Function</a></h2>
+
+		<div class="p-flex-code">
+			<div><h3>input.css</h3>
+<pre><code class="language-css">body {
+  background-color: color(#ffffff blackness(+5%));
+}</code></pre>
+			</div>
+
+			<div><h3>output.css</h3>
+<pre><code class="language-css">body {
+  background-color: rgb(243, 243, 243);
+}</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide slide-orange slide-code">
+		<h2><a href="https://drafts.csswg.org/css-color/#hex-notation">4/8 Digit Hex Notation</a></h2>
+
+		<div class="p-flex p-flex-code">
+			<div><h3>input.css</h3>
+<pre><code class="language-css">body {
+  background: #9d9c;
+  /* Same as #99dd99cc */
+}</code></pre>
+			</div>
+
+			<div><h3>output.css</h3>
+<pre><code class="language-css">body {
+  background: rgba(153, 221, 153, 0.8);
 }</code></pre>
 			</div>
 		</div>
@@ -467,7 +701,9 @@ body {
 		<div>
 			<a href="https://twitter.com/christianvuer">@christianvuer</a>
 		</div>
-		<canvas id="outroanim" style="position: absolute; top: 0; left: 0; z-index: -1;"></canvas>
+		<div id="outroanim-container">
+
+		</div>
 	</section>
 	<script src="scripts/prism.js"></script>
 	<script src="scripts/tweenmax.min.js"></script>

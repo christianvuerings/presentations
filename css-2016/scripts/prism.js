@@ -544,7 +544,7 @@ Prism.languages.svg = Prism.languages.markup;
 Prism.languages.css = {
 	'comment': /\/\*[\w\W]*?\*\//,
 	'atrule': {
-		pattern: /@[\w-]+?.*?(;|(?=\s*\{))/i,
+		pattern: /@[\w-]+?.*?(;|(?=\s*[\{\(]))/i,
 		inside: {
 			'rule': /@[\w-]+/
 			// See rest below

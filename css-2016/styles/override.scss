@@ -85,6 +85,9 @@
 		}
 	}
 }
+.p-code-small {
+	font-size: 0.9em;
+}
 .p-light {
 	opacity: 0.8;
 }
@@ -235,6 +238,12 @@
 	&:after {
 		background-image: linear-gradient(260deg, #29519e 0%, #94eced 100%);
 		opacity: 0.2;
+	}
+	#outroanim {
+		left: 0;
+		position: absolute;
+		top: 0;
+		z-index: -1;
 	}
 }
 // .slide-about-me
