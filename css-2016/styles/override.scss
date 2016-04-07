@@ -46,6 +46,9 @@
 .slide-orange {
 	background-color: #C75A2C;
 }
+.slide-black {
+	background-color: #000;
+}
 
 .p-center {
 	text-align: center;
@@ -124,6 +127,25 @@
     margin-left: -60px;
     margin-right: -60px;
     max-width: calc(100% + 120px);
+}
+
+.p-svg-icon {
+  height: 100px;
+  overflow: visible;
+  width: 100px;
+
+  path {
+	animation: animatePath 5s 1s forwards infinite;
+    stroke: rgba(255,255,255,0.9);
+    fill: none;
+    stroke-width: 0.45;
+  }
+}
+
+@keyframes animatePath {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .intro {
@@ -225,6 +247,16 @@
 	ul {
 		margin-left: 30px;
 		opacity: 0.9;
+	}
+}
+.slide-list-small {
+	font-size: 0.9em;
+}
+
+.slide-svg-animation {
+	.slide-svg-animation-code {
+		margin-left: 50px;
+		margin-top: -15px;
 	}
 }
 

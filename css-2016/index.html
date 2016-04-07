@@ -112,7 +112,7 @@ gulp.task('sass', function() {
 	<section class="slide slide-green">
 		<h2 class="p-flex">
 			<div>
-				Critical CSS
+				<a href="https://github.com/addyosmani/critical">Critical CSS</a>
 			</div>
 		</h2>
 
@@ -133,7 +133,7 @@ gulp.task('sass', function() {
 	<section class="slide slide-green">
 		<h2 class="p-flex">
 			<div>
-				Critical CSS
+				<a href="https://github.com/addyosmani/critical">Critical CSS</a>
 			</div>
 		</h2>
 
@@ -145,7 +145,7 @@ gulp.task('sass', function() {
 	<section class="slide slide-green slide-code">
 		<h2 class="p-flex">
 			<div>
-				Critical CSS
+				<a href="https://github.com/addyosmani/critical">Critical CSS</a>
 			</div>
 		</h2>
 
@@ -252,7 +252,7 @@ gulp.task('sass', function() {
 
 		<div class="p-flex p-flex-space-30">
 			<div>
-				Font Icons
+				Icon Fonts
 				<ul>
 	        		<li>Rendering issues</li>
 					<li>Bad for Accessibility</li>
@@ -264,6 +264,10 @@ gulp.task('sass', function() {
 			</div>
 			<div>
 				SVG
+				<ul>
+	        		<li>Easy to animate</li>
+					<li>Multi-color icons</li>
+				</ul>
 			</div>
 		</div>
 	</section>
@@ -271,7 +275,7 @@ gulp.task('sass', function() {
 	<section class="slide slide-green">
 		<h2 class="p-flex">
 			<div>
-				SVG / Font Icons performance issues
+				SVG / Icon Fonts performance issues
 			</div>
 		</h2>
 		<div>
@@ -280,6 +284,44 @@ gulp.task('sass', function() {
 		<div class="p-subheader">
 			<a href="https://github.com/blog/2112-delivering-octicons-with-svg">GitHub - Delivering Octicons with SVG</a>
 		</div>
+	</section>
+
+	<section class="slide slide-green slide-svg-animation">
+		<h2 class="p-flex">
+			<div>
+				SVG / Animation
+			</div>
+		</h2>
+		<div>
+
+		</div>
+
+		<div class="p-flex">
+			<div>
+				<svg class="p-svg-user p-svg-icon" viewBox="0 0 20 20">
+	            	<path stroke-dasharray="75" stroke-dashoffset="75" d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+	          	</svg>
+			</div>
+			<div class="p-code-small slide-svg-animation-code">
+<pre><code class="language-css">.svg-icon {
+  height: 100px;
+  overflow: visible;
+  width: 100px;
+}
+.svg-icon  path {
+  animation: animatePath 5s 1s forwards infinite;
+  fill: none;
+  stroke: rgba(255, 255, 255, .9);
+  stroke-width: 0.45;
+}
+</code></pre>
+			<div class="p-subheader">
+				<a href="http://codepen.io/suez/pen/dPqxoM">Login/Logout animation concept (adapted)</a>
+			</div>
+		</div>
+
+
+
 	</section>
 
 	<section class="slide slide-green slide-list">
@@ -393,19 +435,6 @@ buttonElem.outerHTML= `
 		</div>
 	</section>
 
-	<section class="slide slide-green slide-list">
-		<h2>CSS Modules / Resources</h2>
-
-		<ul>
-			<li>
-				<a href="http://glenmaddern.com/articles/css-modules">Glen Maddern - CSS Modules</a>
-			</li>
-			<li>
-				<a href="http://glenmaddern.com/articles/interoperable-css">Glen Maddern - Interoperable CSS</a>
-			</li>
-		</ul>
-	</section>
-
 	<section class="slide slide-blue">
 		<h2>CSS Layouts</h2>
 
@@ -453,22 +482,6 @@ buttonElem.outerHTML= `
 		<div>
 			<img src="images/support-flexbox.png" class="p-image" />
 		</div>
-	</section>
-
-	<section class="slide slide-blue slide-list">
-		<h2>Flexbox / Resources</h2>
-
-		<ul>
-			<li>
-				<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks - A Complete Guide to Flexbox</a>
-			</li>
-			<li>
-				<a href="http://philipwalton.github.io/solved-by-flexbox/">Philip Walton - Solved by Flexbox</a>
-			</li>
-			<li>
-				<a href="https://github.com/philipwalton/flexbugs">Flexbugs</a>
-			</li>
-		</ul>
 	</section>
 
 	<section class="slide slide-blue">
@@ -549,17 +562,18 @@ buttonElem.outerHTML= `
 	</section>
 
 	<section class="slide slide-orange">
-		<h2>CSS4</h2>
+		<h2>New CSS features</h2>
 
-		<div>Use It Today...</div>
+		<div>Use Them Today...</div>
 		<div>Custom Properties</div>
 		<div>Custom Media Queries</div>
 		<div>Custom Selectors</div>
 		<div>Color Function</div>
+		<div>4/8 Digit Hex Notation</div>
 	</section>
 
 	<section class="slide slide-image slide-use-today slide-text-right">
-		<h2>Use these CSS4 features today!</h2>
+		<h2>Use these CSS features today!</h2>
 
 		<div class="p-flex p-flex-align-items-center">
 			<div>
@@ -693,6 +707,37 @@ h3 { margin-top: 0 }</code></pre>
 }</code></pre>
 			</div>
 		</div>
+	</section>
+
+	<section class="slide slide-black slide-list slide-list-small">
+		<h2>Resources</h2>
+
+		<ul>
+			<li>
+				<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks - A Complete Guide to Flexbox</a>
+			</li>
+			<li>
+				<a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks - A Complete Guide to Grid</a>
+			</li>
+			<li>
+				<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks - Using SVG</a>
+			</li>
+			<li>
+				<a href="https://drafts.csswg.org/">CSS Working Drafts</a>
+			</li>
+			<li>
+				<a href="https://github.com/philipwalton/flexbugs">Flexbugs</a>
+			</li>
+			<li>
+				<a href="http://glenmaddern.com/articles/css-modules">Glen Maddern - CSS Modules</a>
+			</li>
+			<li>
+				<a href="http://glenmaddern.com/articles/interoperable-css">Glen Maddern - Interoperable CSS</a>
+			</li>
+			<li>
+				<a href="http://philipwalton.github.io/solved-by-flexbox/">Philip Walton - Solved by Flexbox</a>
+			</li>
+		</ul>
 	</section>
 
 	<section class="slide slide-outro slide-image">
