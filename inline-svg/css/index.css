@@ -1,0 +1,78 @@
+body {
+  background: #111;
+}
+
+li {
+  font-size: 35px !important;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.listitem-description {
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.pinterest-logo-svg {
+  background: #fff;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  color: #bd081c;
+  fill: currentColor;
+}
+.pinterest-logo-png {
+  margin-right: 50px;
+  width: 250px;
+}
+.faded {
+  opacity: .7;
+}
+
+.text {
+  fill: none;
+  font-size: 70px;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 10s infinite linear;
+  animation: stroke 10s infinite linear;
+}
+.text-small {
+  font-size: 50px;
+}
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+}
+.text:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+.text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -8s;
+  animation-delay: -8s;
+}
+.text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -10s;
+  animation-delay: -10s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
