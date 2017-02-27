@@ -212,7 +212,7 @@ export default class Presentation extends React.Component {
             </svg>
           </Heading>
           <Text textColor="secondary" margin="40 0 0 0">
-            <span className="faded">by</span> Christian Vuerings</Text>
+            <span className="faded">ask</span> Christian Vuerings</Text>
         </Slide>
       </Deck>
     );
