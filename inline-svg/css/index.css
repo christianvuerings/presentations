@@ -1,7 +1,9 @@
 body {
   background: #111;
 }
-
+h1 {
+  border: none !important;
+}
 li {
   font-size: 35px !important;
   list-style-type: none;
@@ -20,11 +22,19 @@ li {
   fill: currentColor;
 }
 .pinterest-logo-png {
-  margin-right: 50px;
+  margin-left: 50px;
   width: 250px;
 }
 .faded {
   opacity: .7;
+}
+
+a {
+  color: #fff;
+}
+
+blockquote > span {
+  font-size: 3.8rem !important;
 }
 
 .text {
