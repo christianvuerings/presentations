@@ -21,6 +21,7 @@ import preloader from "spectacle/lib/utils/preloader";
 import createTheme from "spectacle/lib/themes/default";
 
 const codeSVGExample = require("../assets/svgexample");
+const codeSVGIconButton = require("../assets/svgIconButton");
 
 // Require CSS
 require("normalize.css");
@@ -158,6 +159,23 @@ export default class Presentation extends React.Component {
             </Quote>
           </BlockQuote>
         </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="secondary">
+          <BlockQuote size={2}>
+            <Quote>Q: What do we do with <em>legacy sprites</em>?</Quote>
+          </BlockQuote>
+          <BlockQuote>
+            <Quote>A: We'll remove a sprite as soon as all references to it are removed</Quote>
+          </BlockQuote>
+        </Slide>
+        <CodeSlide transition={[]} className="codeSlide" lang="jsx" code={codeSVGIconButton} ranges={[
+          { loc: [ 0, 18], title: "IconButton Example" },
+          { loc: [ 2, 3], note: "IconButton import" },
+          { loc: [ 10, 12], note: "Which icon (required)" },
+          { loc: [ 10, 13], note: "The color of the icon (optional)" },
+          { loc: [ 10, 14], note: "Label - make sure to internationalize (required)" },
+          { loc: [ 10, 15], note: "Any JavaScript events" }
+        ]}
+        />
         <CodeSlide transition={[]} className="codeSlide" lang="svg" code={codeSVGExample} ranges={[
           { loc: [ 0, 12], title: "SVG internals" },
           { loc: [ 0, 1], note: "Main SVG tag" },
@@ -212,7 +230,7 @@ export default class Presentation extends React.Component {
             </svg>
           </Heading>
           <Text textColor="secondary" margin="40 0 0 0">
-            <span className="faded">ask</span> Christian Vuerings</Text>
+            <span className="faded">by</span> Christian Vuerings</Text>
         </Slide>
       </Deck>
     );
