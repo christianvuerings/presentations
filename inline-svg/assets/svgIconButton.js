@@ -1,6 +1,6 @@
 module.exports = `import React from 'react';
 import i18n from 'app/common/lib/i18n';
-import { IconButton } from 'pinterest-gestalt';
+import { IconButton } from 'gestalt';
 
 export default (props) => {
   const {
