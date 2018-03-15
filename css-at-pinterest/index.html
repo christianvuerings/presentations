@@ -92,6 +92,15 @@
 		<h2 class="shout">Writing CSS on Pinterest.com is an anti-pattern</h2>
 	</section>
 
+
+  <section class="slide">
+		<h2>The future // <span class="text-light">Goals</span></h2>
+		<ol>
+			<li>Smaller CSS bundle size</li>
+			<li>Obvious link between CSS &amp; JS</li>
+		</ol>
+	</section>
+
   <section class="slide slide-question">
 		<h2 class="shout">What do I use to style my components?</h2>
 	</section>
@@ -139,44 +148,52 @@
 
   <section class="slide slide-table">
     <h2>CSS S // <span class="text-light text-smaller">CSS Modules conversion</span></h2>
-    <table>
-		<tr>
-			<th>Name</th>
-			<th># Lines converted</th>
-		</tr>
-		<tr>
-			<td>@dalvarez</td>
-			<td>898</td>
-		</tr>
-    <tr>
-			<td>@dani</td>
-			<td>612</td>
-		</tr>
-    <tr>
-			<td>@hfu</td>
-			<td>379</td>
-		</tr>
-    <tr>
-			<td>@joycezha</td>
-			<td>275</td>
-		</tr>
-    <tr>
-			<td>@kaanon</td>
-			<td>214</td>
-		</tr>
-    <tr>
-			<td>@jackhsu</td>
-			<td>99</td>
-		</tr>
-    <tr>
-			<td>@ablair</td>
-			<td>40</td>
-		</tr>
-    <tr>
-			<td>@btraut</td>
-			<td>36</td>
-		</tr>
-    </table>
+    <div class="flex">
+      <table>
+      <tr>
+        <td><img src="pictures/csss-danny.png" /></td>
+        <td>Danny Alvarez</td>
+        <td>898</td>
+      </tr>
+      <tr>
+        <td><img src="pictures/csss-dani.png" /></td>
+        <td>Dani Gnibus</td>
+        <td>612</td>
+      </tr>
+      <tr>
+        <td><img src="pictures/csss-helen.png" /></td>
+        <td>Helen Fu</td>
+        <td>379</td>
+      </tr>
+      <tr>
+        <td><img src="pictures/csss-joyce.png" /></td>
+        <td>Joyce Zha</td>
+        <td>275</td>
+      </tr>
+      </table>
+      <table>
+      <tr>
+        <td><img src="pictures/csss-kaanon.png" /></td>
+        <td>Kaanon MacFarlane</td>
+        <td>214</td>
+      </tr>
+      <tr>
+        <td><img src="pictures/csss-jack.png" /></td>
+        <td>Jack Hsu</td>
+        <td>99</td>
+      </tr>
+      <tr>
+        <td><img src="pictures/csss-allan.png" /></td>
+        <td>Allan Blair</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td><img src="pictures/csss-brent.png" /></td>
+        <td>Brent Traut</td>
+        <td>36</td>
+      </tr>
+      </table>
+    </div>
   </section>
 
   <section class="slide slide-question">
@@ -237,7 +254,9 @@
     <iframe src="https://codesandbox.io/embed/3rn98893np?autoresize=1&hidenavigation=1&fontsize=14" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
     <!--
       1) `flex="none"` on first container
-      2) `flex="grow" on last container (or `minWidth={0}`) => More info at https://drafts.csswg.org/css-flexbox/#min-size-auto
+      2) `flex="grow" on last container (or `minWidth={0}`) => More info at
+      https://drafts.csswg.org/css-flexbox/#min-size-auto
+      http://fantasai.inkedblade.net/style/discuss/flexbox-min-size/
       3) This still doesn't work in IE 11 => also set overflow="hidden" on the last container
     -->
   </section>

@@ -243,16 +243,15 @@ a{
     content:attr(value)
 }
 .slide table{
-    margin-left:-96px;
     margin-bottom:1em;
     width:calc(100% + 96px + 112px)
 }
-.slide table td:first-child,.slide table th:first-child{
+/* .slide table td:first-child,.slide table th:first-child{
     padding-left:96px
-}
-.slide table td:last-child,.slide table th:last-child{
+} */
+/* .slide table td:last-child,.slide table th:last-child{
     padding-right:96px
-}
+} */
 .slide table th{
     text-align:left;
     font-weight:700
@@ -708,7 +707,11 @@ a{
 }
 .slide-table td, .slide-table th {
   line-height: 1.6;
-  padding: 0 30px;
+  padding: 0 15px;
+  vertical-align: middle;
+}
+.slide-table img {
+  max-width: 75px;
 }
 
 .slide-before-after h2 {
@@ -817,6 +820,10 @@ a{
 .flex > div {
   padding-left: 20px;
   padding-right: 20px;
+}
+.flex > table {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .text-light {
