@@ -711,7 +711,9 @@ a{
   vertical-align: middle;
 }
 .slide-table img {
-  max-width: 75px;
+  line-height: 1em;
+  padding: 5px 15px;
+  vertical-align: middle;
 }
 
 .slide-before-after h2 {
