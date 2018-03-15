@@ -29,7 +29,7 @@
 			<li>Current state</li>
 			<li>The future</li>
       <li>CSS simplification</li>
-			<li>Gestalt layout patterns</li>
+			<li>CSS gotchas &amp; layout patterns</li>
 		</ol>
 	</section>
 
@@ -42,14 +42,8 @@
     <img src="pictures/state-overview.png" width="800">
 	</section>
 
-  <section class="slide">
-		<h2>Current state // <span class="text-light">Pinboard</span></h2>
-    <img src="pictures/specificity-graph-pinboard.png" width="800">
-    <!-- A pretty bad specificity graph -->
-	</section>
-
   <section class="slide slide-css-selector">
-		<h2>Current state // <span class="text-light">Long selectors</span></h2>
+		<h2>Current state // <span class="text-light text-smaller">Example selector</span></h2>
     <p>
       <pre>
         <code>.ExploreTabStoryHeader .shareStoryButtonWrapper .btn.primary:active.active .ExploreTabStoryHeader .shareStoryButtonWrapper .btn.primary:active:not(.noHoverActive):active</code>
@@ -59,7 +53,13 @@
 	</section>
 
   <section class="slide">
-		<h2>Current state // <span class="text-light">Gestalt</span></h2>
+		<h2>Current state // <span class="text-light">Pinboard CSS</span></h2>
+    <img src="pictures/specificity-graph-pinboard.png" width="800">
+    <!-- A pretty bad specificity graph -->
+	</section>
+
+  <section class="slide">
+		<h2>Current state // <span class="text-light">Gestalt CSS</span></h2>
     <img src="pictures/specificity-graph-gestalt.png" width="800">
     <!-- How a specificity graph should look like -->
 	</section>
@@ -92,24 +92,43 @@
 		<h2 class="shout">Writing CSS on Pinterest.com is an anti-pattern</h2>
 	</section>
 
-  <section class="slide">
-		<h2 class="shout shout-blue">Use Gestalt</h2>
+  <section class="slide slide-question">
+		<h2 class="shout">What do I use to style my components?</h2>
 	</section>
 
-  <section class="slide">
-		<h2>The future // <span class="text-light">Custom CSS</span></h2>
-		<ol>
-			<li>Max 1 CSS file per component</li>
-			<li>Import CSS in JS</li>
-      <li>Route based bundling</li>
-		</ol>
+  <section class="slide slide-hide-count">
+    <img src="pictures/css-pyramid-reverse.svg" width="950">
+    <!--Pinterest.com // Pyramid of styling: What we want it to look like -->
+	</section>
+
+  <section class="slide slide-question">
+		<h2 class="shout">What if we disable SCSS?</h2>
+	</section>
+
+  <section class="slide slide-image slide-profile-with-desktop">
+	</section>
+
+  <section class="slide slide-image slide-profile-without-desktop">
+	</section>
+
+  <section class="slide slide-question">
+		<h2 class="shout">How do we get there?</h2>
 	</section>
 
   <section class="slide slide-image slide-css-simplification">
 		<h2>CSS simplification</h2>
+    <!--CSS Simplification project -->
+	</section>
+
+  <section class="slide slide-question">
+		<h2 class="shout">CSS Modules conversion ✓</h2>
+	</section>
+
+  <section class="slide slide-image slide-css-modules-removal">
 	</section>
 
   <section class="slide slide-table">
+    <h2>CSS S // <span class="text-light text-smaller">CSS Modules conversion</span></h2>
     <table>
 		<tr>
 			<th>Name</th>
@@ -149,143 +168,112 @@
 		</tr>
     </table>
   </section>
-  <section class="slide slide-image slide-css-modules-removal">
+
+  <section class="slide slide-question">
+		<h2 class="shout">Sprite conversion</h2>
+    <!-- No more: 2x / 3x / 4x for icons -->
+    <!-- Test this by: going to a page and see whether the sprite image gets loaded -->
 	</section>
 
-	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+  <section class="slide">
+		<h2>CSS S // <span class="text-light">Sprite conversion</span></h2>
+    <img src="pictures/pinterest-sprite.png" width="100%">
 	</section>
 
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+  <section class="slide slide-question">
+		<h2 class="shout">What should we use instead?</h2>
 	</section>
 
-	<section class="slide">
-		<h2>All kind of lists</h2>
+  <section class="slide">
+		<h2>Gestalt <code>&lt;Icon&gt;</code></h2>
+    <img src="pictures/gestalt-icon-cropped.png" width="800">
+	</section>
+
+  <section class="slide">
+		<h2>The future // <span class="text-light">Custom CSS</span></h2>
 		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
+			<li>Max 1 CSS file per component</li>
+			<li>Import CSS in JS</li>
+      <li>Route based bundling</li>
+      <li>BEM naming for classes</li>
 		</ol>
 	</section>
 
-	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
+  <section class="slide slide-question">
+		<h2 class="shout">CSS gotchas &amp; challenges</h2>
 	</section>
 
-	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
+  <section class="slide slide-question">
+		<h2 class="shout">Why is symmetrical padding important?</h2>
 	</section>
 
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
+  <section class="slide slide-code">
+    <iframe src="https://codesandbox.io/embed/3xlkm827m6?autoresize=1&hidenavigation=1&fontsize=14" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+    <!--
+      1) Easier to reuse elements
+      2) RTL support
+    -->
+  </section>
+
+  <section class="slide slide-question">
+		<h2 class="shout">Ready for some challenges?</h2>
 	</section>
 
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</section>
+  <section class="slide slide-before-after">
+    <h2>Challenge #1 // <span class="text-light text-smaller">Truncate &amp; Flex</span></h2>
+    <div class="flex">
+      <div>
+        <h3>Before</h3>
+        <img src="pictures/truncate-before.png" width="400" class="img-border">
+      </div>
+      <div>
+        <h3>After</h3>
+        <img src="pictures/truncate-after.png" width="400" class="img-border">
+      </div>
+    </div>
+  </section>
 
-	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
+  <section class="slide slide-code">
+    <iframe src="https://codesandbox.io/embed/3rn98893np?autoresize=1&hidenavigation=1&fontsize=14" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+    <!--
+      1) `flex="none"` on first container
+      2) `flex="grow" on last container
+      3) This still doesn't work in IE 11 => also set overflow="hidden" on the last container
+    -->
+  </section>
 
-	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</section>
+  <section class="slide slide-before-after">
+    <h2>Challenge #2 // <span class="text-light">Responsive</span></h2>
+    <div class="flex">
+      <div>
+        <h3>Before</h3>
+        <img src="pictures/responsive-before.png" width="300" class="img-border">
+      </div>
+      <div>
+        <h3>After</h3>
+        <img src="pictures/responsive-after.png" width="300" class="img-border">
+      </div>
+    </div>
+  </section>
 
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
-	</section>
+  <section class="slide slide-code">
+    <iframe src="https://codesandbox.io/embed/92nrjp7n7p?autoresize=1&hidenavigation=1&fontsize=14" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+    <!--
+      1)`size="sm" smSize="md"` on Heading
+      2)
+        `wrap` on the container
+        `column={6} smColumn={4}` on the first 2
+        `column={12} smColumn={4}` on the last one
+    -->
+  </section>
 
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
+    <section class="slide slide-challenge-feature">
+    <h2><span class="text-light">Challenge #3</span></h2>
+    <h3>Write your next feature / component using only Gestalt</h3>
+  </section>
+
+  <section class="slide slide-question">
+		<h2 class="shout">Questions?</h2>
 	</section>
 
 	<script src="shower/shower.min.js"></script>

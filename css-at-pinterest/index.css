@@ -97,7 +97,7 @@ a{
     margin-bottom:1em;
     padding:1.02em 0 .9em 1em;
     width:100%;
-    background:#4caf50 linear-gradient(135deg,#4caf50 50%,#449e48 50%) no-repeat
+    background:#AD081B linear-gradient(135deg,#bd081c 50%,#AD081B 50%) no-repeat;
 }
 @media (min-width:1168px){
     .caption{
@@ -117,7 +117,7 @@ a{
     font:1.17em/1 Aileron Light,sans-serif
 }
 .caption p{
-    color:#c9e7cb;
+    color:#fff;
     font-size:.58em
 }
 .caption a{
@@ -148,6 +148,12 @@ a{
     font:60px/1 Aileron,sans-serif;
     font-weight: bold;
 }
+.slide h3{
+  margin-bottom:10px;
+  color:#212121;
+  font:30px/1 Aileron,sans-serif;
+  font-weight: bold;
+}
 .slide p{
     margin-bottom:1em
 }
@@ -167,7 +173,7 @@ a{
 }
 .slide code,.slide kbd,.slide mark,.slide samp{
     padding:.1em .3em;
-    background:#dbefdc
+    background:#bd081c1a;
 }
 .slide code,.slide kbd,.slide samp{
     line-height:1;
@@ -380,17 +386,20 @@ a{
     bottom:-300%;
     left:0;
     z-index:-1;
-    background:#4caf50 linear-gradient(135deg,#bd081c 50%,#AD081B 50%) no-repeat;
+    background:#AD081B linear-gradient(135deg,#bd081c 50%,#AD081B 50%) no-repeat;
     content:''
 }
-.slide .shout-blue::after{
+.slide.slide-question {
+  background: #111;
+}
+.slide.slide-question .shout::after{
   position:absolute;
   top:-300%;
   right:0;
   bottom:-300%;
   left:0;
   z-index:-1;
-  background:#4caf50 linear-gradient(135deg,#0084FF 50%,#007CF0 50%) no-repeat;
+  background:#111 linear-gradient(135deg,#111 50%,#111 50%) no-repeat;
   content:''
 }
 
@@ -651,6 +660,23 @@ a{
     }
 }
 
+.slide h2 code {
+  border-radius: 40px;
+}
+
+.slide-code {
+  padding: 0;
+  border-top: 10px solid #bd081c;
+}
+
+.slide-code iframe {
+  width:100%;
+  height: 100%;
+  border:0;
+  border-radius: 0;
+  overflow:hidden;
+}
+
 .slide-image {
 	background-color: #000;
 }
@@ -674,13 +700,19 @@ a{
   background: #18191D;
   color: #fff;
 }
+.slide-table h2 {
+  color: #fff;
+}
 .slide-table table {
-  margin-left: auto;
-  margin-right: auto;
   width: auto;
 }
 .slide-table td, .slide-table th {
+  line-height: 1.6;
   padding: 0 30px;
+}
+
+.slide-before-after h2 {
+  margin-bottom: 10px;
 }
 
 
@@ -745,18 +777,46 @@ a{
   text-align: center;
 }
 
+.slide-profile-without-desktop:before {
+  background-image: url(pictures/profile-without-desktop.png);
+}
+.slide-profile-with-desktop:before {
+  background-image: url(pictures/profile-with-desktop.png);
+}
+
 .slide-css-simplification:before {
-  background-image: url(pictures/bonsai-tree.jpg);
+  background-image: url(pictures/bonsai-tree-cropped.jpg);
 }
 .slide-css-simplification:after {
 	background-image: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.1) 100%);
 	opacity: 0.2;
 }
 .slide-css-simplification h2 {
-  font-size: 70px;
-  margin-top: 246px;
+  font-size: 80px;
+  margin-top: 200px;
   text-align: left;
-  margin-left: 440px;
+  margin-left: 375px;
+}
+
+.slide-challenge-feature {
+  background: #111;
+}
+.slide-challenge-feature h2, .slide-challenge-feature h3 {
+  color: #fff;
+}
+.slide-challenge-feature h3 {
+  font-size: 80px;
+}
+
+.flex {
+  display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.flex > div {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .text-light {
@@ -765,9 +825,20 @@ a{
 .text-lighter {
   opacity: 1;
 }
+.text-smaller {
+  font-size: 90%;
+}
 .text-large {
   font-size: 40px;
 }
 strong {
   font-family: "Aileron Heavy";
+}
+
+.img-border {
+  border: #333 dashed 3px;
+}
+
+.slide-hide-count::after {
+  display: none;
 }

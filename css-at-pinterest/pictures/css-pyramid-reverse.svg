@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1040px" height="533px" viewBox="0 0 1040 533" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch Beta 49.1 (51145) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pyramid" transform="translate(0.000000, 7.000000)">
+            <g id="Vectors" transform="translate(296.000000, 223.500000) rotate(180.000000) translate(-296.000000, -223.500000) translate(14.000000, 0.000000)" fill="#BD081C">
+                <polygon id="Path" points="563.410872 447 0.589127715 447 92.0299401 301.753149 471.97006 301.753149 563.410872 447"></polygon>
+                <polygon id="Path" opacity="0.74770154" points="467.716999 294.997481 96.2830012 294.997481 187.723814 149.75063 376.276186 149.75063"></polygon>
+                <polygon id="Path" opacity="0.697350543" points="372.023125 142.994962 191.976875 142.994962 282 0 372.023125 142.994962"></polygon>
+            </g>
+            <path d="M265,487 C265,500.226667 273.2925,511.541667 284.969167,515.985 C284.685,513.556667 284.375,509.578333 285.020833,506.7625 C285.589167,504.36 288.663333,491.4175 288.663333,491.4175 C288.663333,491.4175 287.733333,489.583333 287.733333,486.845 C287.733333,482.556667 290.213333,479.353333 293.313333,479.353333 C295.948333,479.353333 297.214167,481.316667 297.214167,483.693333 C297.214167,486.354167 295.535,490.306667 294.656667,493.975 C293.933333,497.049167 296.206667,499.555 299.229167,499.555 C304.705833,499.555 308.9425,493.768333 308.9425,485.424167 C308.9425,478.035833 303.620833,472.869167 296.051667,472.869167 C287.268333,472.869167 282.101667,479.456667 282.101667,486.250833 C282.101667,488.911667 283.135,491.753333 284.400833,493.303333 C284.659167,493.613333 284.685,493.871667 284.6075,494.181667 C284.375,495.163333 283.858333,497.255833 283.755,497.695 C283.625833,498.2375 283.315833,498.366667 282.721667,498.108333 C278.8725,496.3 276.47,490.668333 276.47,486.1475 C276.47,476.408333 283.548333,467.47 296.8525,467.47 C307.573333,467.47 315.891667,475.090833 315.891667,485.295 C315.891667,495.938333 309.175,504.489167 299.875,504.489167 C296.749167,504.489167 293.804167,502.861667 292.796667,500.95 C292.796667,500.95 291.246667,506.84 290.885,508.286667 C290.135833,511.076667 288.120833,514.615833 286.880833,516.630833 C289.748333,517.535 292.8225,518 296,518 C313.1275,518 327,504.1275 327,487 C327,469.8725 313.1275,456 296,456 C278.8725,456 265,469.8725 265,487" id="Shape" fill="#BD081C" fill-rule="nonzero"></path>
+            <text id="SCSS" font-family="Aileron-Heavy, Aileron" font-size="36" font-weight="600" letter-spacing="-0.2" fill="#FFFFFF">
+                <tspan x="251.902208" y="356">SCSS</tspan>
+            </text>
+            <text id="Inline-CSS" font-family="Aileron-Heavy, Aileron" font-size="44" font-weight="600" letter-spacing="-0.244444445" fill="#FFFFFF">
+                <tspan x="190.758222" y="244">Inline CSS</tspan>
+            </text>
+            <text id="Gestalt" font-family="Aileron-Heavy, Aileron" font-size="64" font-weight="600" letter-spacing="-0.355555803" fill="#FFFFFF">
+                <tspan x="188.332445" y="95">Gestalt</tspan>
+            </text>
+            <text id="99%" transform="translate(27.001680, 77.768281) rotate(60.000000) translate(-27.001680, -77.768281) " font-family="Aileron-Heavy, Aileron" font-size="20" font-weight="600" letter-spacing="-0.111111112" fill="#333333">
+                <tspan x="6.60834651" y="84.7682814">99%</tspan>
+            </text>
+            <text id="0.9%" transform="translate(126.734850, 233.377915) rotate(60.000000) translate(-126.734850, -233.377915) " font-family="Aileron-Heavy, Aileron" font-size="20" font-weight="600" letter-spacing="-0.111111112" fill="#333333">
+                <tspan x="103.847072" y="240.377915">0.9%</tspan>
+            </text>
+            <text id="0.1%" transform="translate(222.341987, 384.429508) rotate(60.000000) translate(-222.341987, -384.429508) " font-family="Aileron-Heavy, Aileron" font-size="20" font-weight="600" letter-spacing="-0.111111112" fill="#333333">
+                <tspan x="199.454209" y="391.429508">0.1%</tspan>
+            </text>
+            <text id="Almost-everything" font-family="Aileron-Heavy, Aileron" font-size="30" font-weight="600" letter-spacing="-0.166666627" fill="#333333">
+                <tspan x="561" y="86">Almost everything</tspan>
+            </text>
+            <text id="One-off-property-/-z" font-family="Aileron-Heavy, Aileron" font-size="30" font-weight="600" letter-spacing="-0.166666627" fill="#333333">
+                <tspan x="465" y="240">One-off property / z-index </tspan>
+            </text>
+            <text id="CSS-animations-/-aut" font-family="Aileron-Heavy, Aileron" font-size="30" font-weight="600" letter-spacing="-0.166666627" fill="#333333">
+                <tspan x="375" y="385">CSS animations / autoprefixed</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
