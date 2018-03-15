@@ -111,6 +111,16 @@
   <section class="slide slide-image slide-profile-without-desktop">
 	</section>
 
+  <section class="slide">
+		<h2>The future // <span class="text-light">Custom CSS</span></h2>
+		<ol>
+			<li>Max 1 CSS file per component</li>
+			<li>Import CSS in JS</li>
+      <li>Route based bundling</li>
+      <li>BEM naming for classes</li>
+		</ol>
+	</section>
+
   <section class="slide slide-question">
 		<h2 class="shout">How do we get there?</h2>
 	</section>
@@ -189,16 +199,6 @@
     <img src="pictures/gestalt-icon-cropped.png" width="800">
 	</section>
 
-  <section class="slide">
-		<h2>The future // <span class="text-light">Custom CSS</span></h2>
-		<ol>
-			<li>Max 1 CSS file per component</li>
-			<li>Import CSS in JS</li>
-      <li>Route based bundling</li>
-      <li>BEM naming for classes</li>
-		</ol>
-	</section>
-
   <section class="slide slide-question">
 		<h2 class="shout">CSS gotchas &amp; challenges</h2>
 	</section>
@@ -237,7 +237,7 @@
     <iframe src="https://codesandbox.io/embed/3rn98893np?autoresize=1&hidenavigation=1&fontsize=14" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
     <!--
       1) `flex="none"` on first container
-      2) `flex="grow" on last container
+      2) `flex="grow" on last container (or `minWidth={0}`) => More info at https://drafts.csswg.org/css-flexbox/#min-size-auto
       3) This still doesn't work in IE 11 => also set overflow="hidden" on the last container
     -->
   </section>
@@ -272,12 +272,12 @@
     <h3>Write your next feature / component using only Gestalt</h3>
   </section>
 
-  <section class="slide slide-question">
-		<h2 class="shout">Questions?</h2>
+  <section class="slide slide-shout">
+		<h2 class="shout">Questions?<br />
+    <span style="font-size: 50px;">Ping @cvuerings in #web</span>
+    </h2>
 	</section>
 
 	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
-
 </body>
 </html>
