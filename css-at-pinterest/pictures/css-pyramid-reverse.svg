@@ -33,8 +33,8 @@
             <text id="Almost-everything" font-family="Aileron-Heavy, Aileron" font-size="30" font-weight="600" letter-spacing="-0.166666627" fill="#333333">
                 <tspan x="561" y="86">Almost everything</tspan>
             </text>
-            <text id="One-off-property-/-z" font-family="Aileron-Heavy, Aileron" font-size="30" font-weight="600" letter-spacing="-0.166666627" fill="#333333">
-                <tspan x="465" y="240">One-off property / z-index </tspan>
+            <text id="One-off-property-/-l" font-family="Aileron-Heavy, Aileron" font-size="30" font-weight="600" letter-spacing="-0.166666627" fill="#333333">
+                <tspan x="465" y="240">One-off property / legacy compability</tspan>
             </text>
             <text id="CSS-animations-/-aut" font-family="Aileron-Heavy, Aileron" font-size="30" font-weight="600" letter-spacing="-0.166666627" fill="#333333">
                 <tspan x="375" y="385">CSS animations / autoprefixed</tspan>

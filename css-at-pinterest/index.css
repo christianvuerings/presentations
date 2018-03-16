@@ -706,13 +706,12 @@ a{
   width: auto;
 }
 .slide-table td, .slide-table th {
-  line-height: 1.6;
-  padding: 0 15px;
+  line-height: 1em;
+  padding: 5px 15px;
   vertical-align: middle;
 }
 .slide-table img {
-  line-height: 1em;
-  padding: 5px 15px;
+  max-width: 75px;
   vertical-align: middle;
 }
 
