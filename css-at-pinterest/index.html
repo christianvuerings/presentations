@@ -18,9 +18,6 @@
 	<section class="slide slide-image slide-image-intro" id="cover">
 		<h2>CSS at Pinterest</h2>
 		<p>by <a href="http://christianvuerings.com">Christian Vuerings</a></p>
-		<style>
-
-		</style>
 	</section>
 
 	<section class="slide">
@@ -29,7 +26,7 @@
 			<li>Current state</li>
 			<li>The future</li>
       <li>CSS simplification</li>
-			<li>CSS gotchas &amp; layout patterns</li>
+			<li>CSS challenges &amp; layout patterns</li>
 		</ol>
 	</section>
 
@@ -49,7 +46,11 @@
         <code>.ExploreTabStoryHeader .shareStoryButtonWrapper .btn.primary:active.active .ExploreTabStoryHeader .shareStoryButtonWrapper .btn.primary:active:not(.noHoverActive):active</code>
       </pre>
     </p>
-    <!-- Makes me a sad panda -->
+    <!--
+      Makes me a sad panda
+      - Hard to maintain
+      - Depends on parent CSS classes
+    -->
 	</section>
 
   <section class="slide">
@@ -89,16 +90,17 @@
 	</section>
 
   <section class="slide">
-		<h2 class="shout">Writing CSS on Pinterest.com is an anti-pattern</h2>
-	</section>
-
-
-  <section class="slide">
 		<h2>The future // <span class="text-light">Goals</span></h2>
 		<ol>
 			<li>Smaller CSS bundle size</li>
 			<li>Obvious link between CSS &amp; JS</li>
+      <li>CSS safety</li>
+      <li>Bare metal CSS access</li>
 		</ol>
+	</section>
+
+  <section class="slide">
+		<h2 class="shout">Writing CSS on Pinterest.com is an anti-pattern</h2>
 	</section>
 
   <section class="slide slide-question">
@@ -109,6 +111,41 @@
     <img src="pictures/css-pyramid-reverse.svg" width="900">
     <!--Pinterest.com // Pyramid of styling: What we want it to look like -->
 	</section>
+
+  <section class="slide">
+		<h2>The future // <span class="text-light">Gestalt</span></h2>
+		<ol>
+			<li><a href="https://github.com/pinterest/gestalt">Open source</a></li>
+			<li>Easy to use <a href="https://codesandbox.io/s/k5plvp9v8v">playground</a></li>
+      <li><a href="https://pinterest.github.io/pds/">PDS spec</a> compliant</li>
+      <li>Accessible by default</li>
+		</ol>
+	</section>
+
+  <section class="slide slide-code">
+    <iframe src="https://codesandbox.io/embed/k5plvp9v8v?autoresize=1&hidenavigation=1&fontsize=14" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+  </section>
+
+  <section class="slide">
+		<h2>The future // <span class="text-light">Inline styles</span></h2>
+		<ol>
+			<li>Slower to render => use sparingly</li>
+			<li>Use <code>dangerouslySetInlineStyle</code> on <code>Box</code></li>
+		</ol>
+    <!-- In the dom - has to render + parse 1 attribute per component -->
+	</section>
+
+  <section class="slide slide-code">
+    <iframe src="https://codesandbox.io/embed/j3zn11qxl9?autoresize=1&hidenavigation=1&fontsize=14" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+  </section>
+
+  <section class="slide slide-question">
+		<h2 class="shout">How about SCSS?</h2>
+	</section>
+
+  <section class="slide slide-code">
+    <iframe src="https://codesandbox.io/embed/mykrljmrjp?autoresize=1&hidenavigation=1&fontsize=14" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+  </section>
 
   <section class="slide slide-question">
 		<h2 class="shout">What if we disable SCSS?</h2>
@@ -291,10 +328,13 @@
     <h3>Write your next feature / component using only Gestalt</h3>
   </section>
 
-  <section class="slide slide-shout">
-		<h2 class="shout">Questions?<br />
-    <span style="font-size: 50px;">Ping @cvuerings in #web</span>
-    </h2>
+  <section class="slide slide-hide-count">
+    <div class="flex flex-align-center">
+      <div>
+        <img src="pictures/pin-css-white.png" width="400">
+      </div>
+      <h2 style="margin-left: 40px;">Questions?</h2>
+    </div>
 	</section>
 
 	<script src="shower/shower.min.js"></script>
