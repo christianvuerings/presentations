@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gestalt: Demo Time: 2020 Q1</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="shower/themes/material/styles/screen-16x10.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="shower list">
+    <header class="caption">
+      <h1>Gestalt: Demo Time</h1>
+      <p>by Christian Vuerings</p>
+    </header>
+
+    <section class="slide slide-image slide-image-intro" id="cover">
+      <h2>Gestalt: Demo Time</h2>
+      <p style="display: none;">by <a href="http://christianvuerings.com">Christian Vuerings</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>Main Focus</h2>
+      <ul>
+        <li>Q1: Lego</li>
+        <li>Q2: Ads/Gestalt</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Other Items</h2>
+      <ul>
+        <li>Internationalisation</li>
+        <li>Documentation</li>
+        <li>Linters</li>
+        <li>Metrics</li>
+      </ul>
+    </section>
+
+    <!-- <section class="slide slide-image slide-current-state">
+      <h2>Q1: Lego</h2>
+    </section> -->
+
+    <section class="slide slide-image slide-lego-before-after">
+      <h2>Q1: Lego</h2>
+    </section>
+
+    <section class="slide slide-code slide-code-dual">
+      <iframe
+        src="https://codesandbox.io/embed/gestalt-before-lego-syg4h?autoresize=1&codemirror=1&view=preview&hidedevtools=1&hidenavigation=1"
+        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+      ></iframe>
+      <iframe
+        src="https://codesandbox.io/embed/gestalt-after-lego-niquu?autoresize=1&codemirror=1&view=preview&hidedevtools=1&hidenavigation=1"
+        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+      ></iframe>
+    </section>
+
+    <section class="slide slide-image slide-grid slide-internationalisation">
+      <h2>Internationalisation</h2>
+
+      <div class="grid">
+        <h3>RTL</h3>
+        <h3>Letter Spacing</h3>
+        <h3>Leading</h3>
+        <h3>Wrapping</h3>
+      </div>
+    </section>
+
+    <section class="slide slide-code">
+      <!-- Thanks to Selena Zeng-->
+      <iframe
+        src="https://pinterest.github.io/gestalt#Switch"
+        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+      ></iframe>
+    </section>
+
+    <section class="slide slide-code">
+      <iframe
+        src="https://codesandbox.io/embed/gestalt-breakword-example-r3pmo?autoresize=1&codemirror=1&view=preview&hidedevtools=1&hidenavigation=1"
+        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+      ></iframe>
+    </section>
+
+    <section class="slide slide-image slide-grid slide-documentation">
+      <h2>Documentation</h2>
+
+      <div class="grid">
+        <h3>Checkerboard</h3>
+        <h3>Codesandbox</h3>
+        <h3>Links</h3>
+        <h3>Netlify</h3>
+      </div>
+    </section>
+
+    <section class="slide slide-code">
+      <iframe
+        src="https://pinterest.github.io/gestalt#Button"
+        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+      ></iframe>
+    </section>
+
+    <section class="slide slide-image slide-grid slide-linting">
+      <h2>Linters</h2>
+
+      <div class="grid">
+        <h3>DangerouslyUse...</h3>
+        <h3>PDS</h3>
+      </div>
+    </section>
+
+    <section class="slide slide-video">
+      <video
+        class="video"
+        controls
+        src="pictures/linting2.mov"
+      ></iframe>
+    </section>
+
+    <section class="slide slide-image slide-grid slide-metrics">
+      <h2>Metrics</h2>
+
+      <div class="grid">
+        <h3>Usage V2</h3>
+        <h3>Per Directory</h3>
+        <h3>Releases</h3>
+      </div>
+    </section>
+
+    <section class="slide slide-usage-statsboard">
+      <h2>Usage // <span class="text-light"><a href="https://statsboard.pinadmin.com/build2?begin=-12h&settings=%7B%22cmd%22%3A%22return+%28stat%2F100%29.dropna%28%29%22%2C%22forms%22%3A%5B%7B%22aggregator%22%3A%22avg%22%2C%22alias%22%3A%22stat%22%2C%22downsample%22%3Atrue%2C%22downsampleAggregator%22%3A%22avg%22%2C%22downsampleInterval%22%3A%221h%22%2C%22metric%22%3A%22stats.gauges.webapp.gestalt.component_usage_v2_subdirectory.app_common_react_components_growth*%22%2C%22usePreAgg%22%3Atrue%7D%5D%2C%22hiddenTags%22%3A%5B%22nm%22%5D%2C%22legendPosition%22%3A%22bottom%22%2C%22title%22%3A%22Gestalt+Usage%3A+app%2Fcommon%2Freact%2Fcomponents%2Fgrowth%22%2C%22y_axis_label%22%3A%22Percent+of+components%22%2C%22reducer_interval%22%3A3600%7D&dashboard=%2Fd%2Fgestalt%2Fusage%2FOverall%2520usage&use_preagg=true">Per Directory</a></span></h2>
+      <div style="display: flex; justify-content: center;">
+        <img src="pictures/gestalt-usage.png" width="700">
+      </div>
+    </section>
+
+    <section class="slide slide-code">
+      <iframe
+        src="https://repoinfo.now.sh/info?query=pinterest%2Fgestalt"
+        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+      ></iframe>
+    </section>
+
+    <section class="slide slide-image slide-grid slide-thankyou">
+      <!-- Credits to https://codepen.io/rachsmith/pen/LpZbmZ -->
+      <iframe src="thankyou/index.html" width="100%" height="400px"></iframe>
+
+      <div class="flexy">
+        <h3>Aiwei Wu</h3>
+        <h3>Alberto Carreras</h3>
+        <h3>Annie Won</h3>
+        <h3>Anyi Diao</h3>
+        <h3>Brent Traut</h3>
+        <h3>Chong Yao</h3>
+        <h3>Christian Vuerings</h3>
+        <h3>Dena Mwangi</h3>
+        <h3>Elia Karagiannis</h3>
+        <h3>Emily Chen</h3>
+        <h3>Eva Zhang</h3>
+        <h3>Ignacio Fassini</h3>
+        <h3>Jenny Steele</h3>
+        <h3>Peter Zed</h3>
+        <h3>Ryan James</h3>
+        <h3>Selena Zeng</h3>
+        <h3>Tuan Huynh</h3>
+      </div>
+    </section>
+
+    <script>
+      const slideThankYou = document.querySelector('.slide-thankyou');
+      const slideThankYouIframe = document.querySelector('.slide-thankyou iframe');
+
+      const setIframeSrc = (src) => {
+        if (slideThankYouIframe.getAttribute('src') !== src) {
+          slideThankYouIframe.setAttribute('src', src);
+        }
+      }
+
+      setInterval(() => {
+        setIframeSrc(slideThankYou.classList.contains('active') ? 'thankyou/index.html' : '');
+      }, 1000);
+    </script>
+    <script src="shower/shower.min.js"></script>
+  </body>
+</html>
