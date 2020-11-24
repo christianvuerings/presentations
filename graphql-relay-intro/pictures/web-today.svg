@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="650px" viewBox="0 0 1024 650" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>web-today</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web-today">
+            <polygon id="Path" fill="#080808" points="0 0 1024 0 1024 650 0 650"></polygon>
+            <polygon id="Path" fill="#3D3467" points="68.4617 261.886 268.332 261.886 268.332 378.114 68.4617 378.114"></polygon>
+            <polygon id="Path" fill="#FFFFFF" points="284.754 315.067 284.754 324.424 373.654 324.424 373.654 338.461 397.049 319.745 373.654 301.029 373.654 315.067"></polygon>
+            <polygon id="Path" fill="#3D3467" points="412.065 261.886 611.935 261.886 611.935 378.114 412.065 378.114"></polygon>
+            <text id="Node.js-Resource-Lay" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
+                <tspan x="460.822425" y="295">Node.js</tspan>
+                <tspan x="447.485023" y="331">Resource</tspan>
+                <tspan x="474.159827" y="367">Layer</tspan>
+            </text>
+            <text id="Browser" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
+                <tspan x="113.669593" y="331">Browser</tspan>
+            </text>
+            <polygon id="Path" fill="#3D3467" points="755.335 261.886 955.205 261.886 955.205 378.114 755.335 378.114"></polygon>
+            <polygon id="Path" fill="#FFFFFF" points="630.114 315.322 630.114 324.679 719.014 324.679 719.014 338.716 742.409 320 719.014 301.284 719.014 315.322"></polygon>
+            <text id="ngApi" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
+                <tspan x="817.317542" y="331">ngApi</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
