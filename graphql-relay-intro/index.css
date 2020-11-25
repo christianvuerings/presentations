@@ -1,43 +1,43 @@
 @charset "UTF-8";
 @font-face {
   font-family: Aileron;
-  src: url(shower/themes/material/fonts/aileron-regular.woff) format("woff");
+  src: url(assets/themes/material/fonts/aileron-regular.woff) format("woff");
 }
 @font-face {
   font-weight: 700;
   font-family: Aileron Bold;
-  src: url(shower/themes/material/fonts/aileron-bold.woff) format("woff");
+  src: url(assets/themes/material/fonts/aileron-bold.woff) format("woff");
 }
 @font-face {
   font-style: italic;
   font-family: Aileron;
-  src: url(shower/themes/material/fonts/aileron-italic.woff) format("woff");
+  src: url(assets/themes/material/fonts/aileron-italic.woff) format("woff");
 }
 @font-face {
   font-style: italic;
   font-weight: 700;
   font-family: Aileron;
-  src: url(shower/themes/material/fonts/aileron-bold-italic.woff) format("woff");
+  src: url(assets/themes/material/fonts/aileron-bold-italic.woff) format("woff");
 }
 @font-face {
   font-family: Aileron Black;
-  src: url(shower/themes/material/fonts/aileron-black.woff) format("woff");
+  src: url(assets/themes/material/fonts/aileron-black.woff) format("woff");
 }
 @font-face {
   font-family: Aileron Heavy;
-  src: url(shower/themes/material/fonts/aileron-heavy.woff) format("woff");
+  src: url(assets/themes/material/fonts/aileron-heavy.woff) format("woff");
 }
 @font-face {
   font-family: Aileron Light;
-  src: url(shower/themes/material/fonts/aileron-light.woff) format("woff");
+  src: url(assets/themes/material/fonts/aileron-light.woff) format("woff");
 }
 @font-face {
   font-family: Aileron UltraLight;
-  src: url(shower/themes/material/fonts/aileron-ultralight.woff) format("woff");
+  src: url(assets/themes/material/fonts/aileron-ultralight.woff) format("woff");
 }
 @font-face {
   font-family: Roboto Mono;
-  src: url(shower/themes/material/fonts/roboto-mono-regular.woff) format("woff");
+  src: url(assets/themes/material/fonts/roboto-mono-regular.woff) format("woff");
 }
 *,
 ::after,
@@ -265,8 +265,16 @@ a {
   color: #9e9e9e;
 }
 .slide a {
-  background: linear-gradient(to top, currentColor 0.09em, transparent 0.09em)
+  /* background: linear-gradient(to top, currentColor 0.09em, transparent 0.09em)
+    repeat-x; */
+  background: linear-gradient(
+      to top,
+      transparent 1px,
+      rgba(255, 255, 255, 1) 2px,
+      transparent 5px
+    )
     repeat-x;
+
   color: #bd081c;
 }
 .slide b,
@@ -279,19 +287,18 @@ a {
 .slide i {
   font-style: italic;
 }
-.slide code,
+/* .slide code,
 .slide kbd,
 .slide mark,
 .slide samp {
   padding: 0.1em 0.3em;
   background: #bd081c1a;
-}
-.slide code,
+} */
+/* .slide code,
 .slide kbd,
 .slide samp {
-  line-height: 1;
   font-family: Roboto Mono, monospace, monospace;
-}
+} */
 .slide sub,
 .slide sup {
   position: relative;
@@ -322,7 +329,7 @@ a {
 .slide ul {
   margin-bottom: 1em;
   counter-reset: list;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
 }
 .slide ol li,
@@ -332,9 +339,11 @@ a {
 }
 .slide ol li .small,
 .slide ul li .small {
-  margin-top: -30px;
-  margin-left: 2em;
+  margin-top: -0.3em;
   opacity: 0.6;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  text-indent: 0;
 }
 .slide ol li::before,
 .slide ul li::before {
@@ -392,7 +401,7 @@ a {
 .slide table.striped tr > * {
   background-image: none;
 }
-.slide pre {
+/* .slide pre {
   margin-bottom: 1em;
   counter-reset: code;
   white-space: normal;
@@ -418,6 +427,9 @@ a {
   color: #bdbdbd;
   counter-increment: code;
   content: counter(code, decimal-leading-zero) ".";
+} */
+.line-numbers .line-numbers-rows {
+  top: -2px;
 }
 .slide pre mark {
   position: relative;
@@ -1007,7 +1019,11 @@ a {
 
 .slide-dark {
   background-color: #080808;
-  color: #fff
+  color: #fff;
+}
+.slide-dark a {
+  color: #fff;
+  text-decoration: dashed;
 }
 .slide-dark h2 {
   color: #fff;
@@ -1015,6 +1031,23 @@ a {
 .slide-dark h3 {
   color: #fff;
 }
+
+.slide-code-inline pre {
+  margin: 0 -112px 0 -96px;
+  padding: 0 -100px;
+}
+.code-title {
+  position: absolute;
+  top: -0.35em;
+  font-family: "Aileron Bold";
+  opacity: 0.6;
+}
+
+.slide-dark.slide-code-inline :not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: transparent;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1026,6 +1059,41 @@ a {
 }
 .slide-graphql:before {
   background-image: url(pictures/graphql.svg);
+}
+.slide-introspection:before {
+  background-image: url(pictures/introspection.jpg);
+}
+.slide-introspection:after {
+  background: #000;
+  opacity: 0.8;
+}
+.slide-relay-devtools:before {
+  background-image: url(pictures/relay-devtools.png);
+}
+
+.relay-animated {
+  animation: orangeFilter 2s infinite;
+  margin-top: 40px;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+}
+
+@keyframes orangeFilter {
+  0% {
+    filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.1));
+  }
+  25% {
+    filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 1));
+  }
+  75% {
+    filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.1));
+  }
 }
 
 .slide-grid h2 {
@@ -1125,7 +1193,7 @@ a {
   position: absolute;
 }
 .slide-thankyou .flexy {
-  margin: 280px 40px 0;
+  margin: 280px 200px 0;
   text-align: center;
   pointer-events: none;
   position: absolute;

@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="shower/themes/material/styles/screen-16x10.css"
+      href="assets/themes/material/styles/screen-16x10.css"
     />
+    <link rel="stylesheet" href="assets/prism.css" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body class="shower list">
@@ -19,7 +20,9 @@
 
     <section class="slide slide-image slide-image-intro" id="cover">
       <h2>GraphQL & Relay: Intro</h2>
-      <p style="display: none;">by <a href="http://christianvuerings.com">Christian Vuerings</a></p>
+      <p style="display: none">
+        by <a href="http://christianvuerings.com">Christian Vuerings</a>
+      </p>
     </section>
 
     <section class="slide slide-list">
@@ -40,7 +43,8 @@
     <section class="slide slide-list slide-dark">
       <h2>Resource layer: issues</h2>
       <ul>
-        <li><strong>Business logic</strong> in 3 different places <br/><div class="small text-normal">Client / Node.js &amp; ngApi</div></li>
+        <!-- prettier-ignore -->
+        <li><strong>Business logic</strong> in 3 different places<div class="small text-normal">Client / Node.js &amp; ngApi</div></li>
         <li><strong>Untyped</strong></li>
         <li><strong>Overfetch</strong> due to shared fieldsets</li>
         <li><strong>Unique</strong> to Pinterest</li>
@@ -60,7 +64,8 @@
     <section class="slide slide-list slide-dark">
       <h2>GraphQL: Benefits</h2>
       <ul>
-        <li><strong>Business logic</strong> in 2 places <br/><div class="small">Client &amp; ngApi</div></li>
+        <!-- prettier-ignore -->
+        <li><strong>Business logic</strong> in 2 places<div class="small">Client &amp; ngApi</div></li>
         <li><strong>Typed</strong></li>
         <li><strong>Only fetch</strong> what you need</li>
         <li><strong>Easily combine queries</strong></li>
@@ -70,110 +75,406 @@
     <section class="slide slide-dark slide-center">
       <h2 class="text-center">GraphQL: Demo</h2>
       <h3 class="text-center">
-        <a class="demo-button" href="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20viewer%20%7B%0A%20%20%20%20id%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%7D%0A%7D%0A" target="_blank">🚀 Launch Demo</a>
+        <a
+          class="demo-button"
+          href="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20viewer%20%7B%0A%20%20%20%20id%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%7D%0A%7D%0A"
+          target="_blank"
+          >🚀 Launch Demo</a
+        >
       </h3>
     </section>
 
-    <section class="slide slide-code">
-      <iframe
-        src="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20viewer%20%7B%0A%20%20%20%20id%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%7D%0A%7D%0A"
-      ></iframe>
+    <section class="slide slide-list slide-dark">
+      <h2>GraphQL: Examples</h2>
+      <ul>
+        <li>
+          <a
+            href="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20viewer%20%7B%0A%20%20%20%20id%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%7D%0A%7D%0A"
+            >Simple Query</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20coreUser(id%3A%20%22207025051529119245%22)%7B%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%20%20about%0A%20%20%7D%0A%7D%0A"
+            >Query with Arguments</a
+          >
+        </li>
+        <li>
+          <a
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20username%0A%20%20%7D%0A%20%20%0A%20%20allCountries%0A%7D'
+            >Combination Query</a
+          >
+        </li>
+        <li>
+          <a
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?query=query%20Viewer%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20followers(first%3A%2010)%20%7B%0A%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20user%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20firstName%0A%20%20%20%20%20%20%20%20%20%20%20%20lastName%0A%20%20%20%20%20%20%20%20%20%20%20%20boards(first%3A%205)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
+            >Nested Query</a
+          >
+        </li>
+        <li>
+          <a
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20boards(first%3A%205)%20%7B%0A%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20pageInfo%20%7B%0A%20%20%20%20%20%20%20%20endCursor%0A%20%20%20%20%20%20%20%20hasNextPage%0A%20%20%20%20%20%20%20%20hasPreviousPage%0A%20%20%20%20%20%20%20%20startCursor%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
+            >Pagination</a
+          >
+        </li>
+      </ul>
     </section>
 
-    <section class="slide slide-code slide-code-dual">
-      <iframe
-        src="https://codesandbox.io/embed/gestalt-before-lego-syg4h?autoresize=1&codemirror=1&view=preview&hidedevtools=1&hidenavigation=1"
-        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-      ></iframe>
-      <iframe
-        src="https://codesandbox.io/embed/gestalt-after-lego-niquu?autoresize=1&codemirror=1&view=preview&hidedevtools=1&hidenavigation=1"
-        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-      ></iframe>
+    <section class="slide slide-image slide-dark slide-introspection">
+      <h2>GraphQL: Introspection</h2>
+      <h3 class="subtitle text-center">
+        Query a GraphQL schema for more information
+      </h3>
+      <!-- Just the language, nothing more-->
     </section>
 
-    <section class="slide slide-image slide-grid slide-internationalisation">
-      <h2>Internationalisation</h2>
+    <section class="slide slide-list slide-dark">
+      <h2>GraphQL: Introspection</h2>
+      <ul>
+        <li>
+          <a
+            href="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=%7B%0A%20%20__schema%20%7B%0A%20%20%20%20types%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D"
+            >All Types</a
+          >
+        </li>
+        <li>
+          <a
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=%7B%0A%20%20__type(name%3A%20"Board")%20%7B%0A%20%20%20%20name%0A%20%20%20%20fields%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20type%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20kind%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D'
+            >Fields on Board</a
+          >
+        </li>
+        <li>
+          <a
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query=%7B%0A%20%20__type(name%3A%20"BoardLayout")%20%7B%0A%20%20%20%20name%0A%20%20%20%20kind%0A%20%20%20%20enumValues%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
+            >Values for BoardLayout (enum)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20IntrospectionQuery%20%7B%0A%20%20__schema%20%7B%0A%20%20%20%20queryType%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%20%20mutationType%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%20%20subscriptionType%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%20%20types%20%7B%0A%20%20%20%20%20%20...FullType%0A%20%20%20%20%7D%0A%20%20%20%20directives%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20description%0A%20%20%20%20%20%20locations%0A%20%20%20%20%20%20args%20%7B%0A%20%20%20%20%20%20%20%20...InputValue%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0Afragment%20FullType%20on%20__Type%20%7B%0A%20%20kind%0A%20%20name%0A%20%20description%0A%20%20fields(includeDeprecated%3A%20true)%20%7B%0A%20%20%20%20name%0A%20%20%20%20description%0A%20%20%20%20args%20%7B%0A%20%20%20%20%20%20...InputValue%0A%20%20%20%20%7D%0A%20%20%20%20type%20%7B%0A%20%20%20%20%20%20...TypeRef%0A%20%20%20%20%7D%0A%20%20%20%20isDeprecated%0A%20%20%20%20deprecationReason%0A%20%20%7D%0A%20%20inputFields%20%7B%0A%20%20%20%20...InputValue%0A%20%20%7D%0A%20%20interfaces%20%7B%0A%20%20%20%20...TypeRef%0A%20%20%7D%0A%20%20enumValues(includeDeprecated%3A%20true)%20%7B%0A%20%20%20%20name%0A%20%20%20%20description%0A%20%20%20%20isDeprecated%0A%20%20%20%20deprecationReason%0A%20%20%7D%0A%20%20possibleTypes%20%7B%0A%20%20%20%20...TypeRef%0A%20%20%7D%0A%7D%0A%0Afragment%20InputValue%20on%20__InputValue%20%7B%0A%20%20name%0A%20%20description%0A%20%20type%20%7B%0A%20%20%20%20...TypeRef%0A%20%20%7D%0A%20%20defaultValue%0A%7D%0A%0Afragment%20TypeRef%20on%20__Type%20%7B%0A%20%20kind%0A%20%20name%0A%20%20ofType%20%7B%0A%20%20%20%20kind%0A%20%20%20%20name%0A%20%20%20%20ofType%20%7B%0A%20%20%20%20%20%20kind%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20ofType%20%7B%0A%20%20%20%20%20%20%20%20kind%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20ofType%20%7B%0A%20%20%20%20%20%20%20%20%20%20kind%0A%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20ofType%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20kind%0A%20%20%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20ofType%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20kind%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20ofType%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20kind%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D"
+            >Complete Introspection Query</a
+          >
+          (<a
+            href="https://github.com/graphql/graphql-js/blob/master/src/utilities/getIntrospectionQuery.js"
+            >source</a
+          >)
+        </li>
+      </ul>
+    </section>
 
-      <div class="grid">
-        <h3>RTL</h3>
-        <h3>Letter Spacing</h3>
-        <h3>Leading</h3>
-        <h3>Wrapping</h3>
+    <section class="slide slide-hide-count slide-dark slide-code-inline">
+      <h2>GraphQL: Mutation</h2>
+
+      <div>
+        <pre
+          class="line-numbers"
+          data-line="1"
+        ><code class="language-graphql">mutation UpdateFirstNameMutation($firstName: PiiString) {
+  pinnerUpdate(input: { firstName: $firstName }) {
+    response {
+      firstName
+    }
+  }
+}</code></pre>
+
+        <pre
+          class="line-numbers"
+        ><div class="code-title">Variables</div><code class="language-json">{
+  "firstName": "Luminara"
+}</code></pre>
       </div>
     </section>
 
-    <section class="slide slide-code">
-      <!-- Thanks to Selena Zeng-->
-      <iframe
-        src="https://pinterest.github.io/gestalt#Switch"
-        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-      ></iframe>
-    </section>
+    <section class="slide slide-dark slide-code-inline">
+      <h2>GraphQL: Mutation Response</h2>
 
-    <section class="slide slide-code">
-      <iframe
-        src="https://codesandbox.io/embed/gestalt-breakword-example-r3pmo?autoresize=1&codemirror=1&view=preview&hidedevtools=1&hidenavigation=1"
-        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-      ></iframe>
-    </section>
-
-    <section class="slide slide-image slide-grid slide-documentation">
-      <h2>Documentation</h2>
-
-      <div class="grid">
-        <h3>Checkerboard</h3>
-        <h3>Codesandbox</h3>
-        <h3>Links</h3>
-        <h3>Netlify</h3>
+      <div>
+        <pre class="line-numbers"><code class="language-json">{
+  "data": {
+    "response": {
+      "firstName": "Luminara"
+    }
+  }
+}</code></pre>
       </div>
     </section>
 
-    <section class="slide slide-code">
-      <iframe
-        src="https://pinterest.github.io/gestalt#Button"
-        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-      ></iframe>
-    </section>
-
-    <section class="slide slide-image slide-grid slide-linting">
-      <h2>Linters</h2>
-
-      <div class="grid">
-        <h3>DangerouslyUse...</h3>
-        <h3>PDS</h3>
+    <section class="slide slide-dark slide-code-inline">
+      <div style="margin-top: -3em">
+        <pre
+          class="line-numbers"
+        ><div class="code-title">GraphQL: Mutation Error Handling</div><code class="language-graphql">mutation UpdateFirstNameMutation($firstName: PiiString) {
+  pinnerUpdate(input: { firstName: $firstName }) {
+    response {
+      __typename
+      ... on NotFound {
+        error {
+          message
+        }
+      }
+      ... on Pinner {
+        firstName
+      }
+    }
+  }
+}</code></pre>
       </div>
     </section>
 
-    <section class="slide slide-video">
-      <video
-        class="video"
-        controls
-        src="pictures/linting2.mov"
-      ></iframe>
+    <section class="slide slide-list slide-dark">
+      <h2>GraphQL: Resources</h2>
+      <ul>
+        <li>
+          <a href="https://graphql.org/learn/">Graphql.org/learn</a>
+        </li>
+        <li>
+          <a href="https://www.howtographql.com/">How to GraphQL</a>
+        </li>
+      </ul>
     </section>
 
-    <section class="slide slide-image slide-grid slide-metrics">
-      <h2>Metrics</h2>
-
-      <div class="grid">
-        <h3>Usage V2</h3>
-        <h3>Per Directory</h3>
-        <h3>Releases</h3>
+    <section class="slide slide-image slide-dark">
+      <h2>Relay</h2>
+      <h3 class="subtitle text-center">
+        Production-ready GraphQL client for React
+      </h3>
+      <div class="text-center">
+        <svg
+          width="400"
+          viewBox="0 0 600 353"
+          xmlns="http://www.w3.org/2000/svg"
+          class="relay-animated"
+        >
+          <path
+            d="M68.813 4.138c24.566 0 45.352 16.213 52.271 38.544l250.553.001c40.42 0 73.299 32.943 73.299 73.433 0 40.49-32.88 73.43-73.3 73.43H233.142c-23.874 0-43.294 19.456-43.294 43.375 0 23.911 19.423 43.367 43.294 43.367l253.597-.001c6.522-22.968 27.615-39.782 52.637-39.782 30.226 0 54.719 24.536 54.719 54.816s-24.493 54.817-54.72 54.817c-25.023 0-46.117-16.817-52.637-39.787l-253.594-.001c-40.42 0-73.302-32.938-73.302-73.43 0-40.49 32.884-73.432 73.302-73.432H371.64c23.87 0 43.29-19.457 43.29-43.371s-19.422-43.37-43.29-43.37h-249.85c-6.106 23.601-27.51 41.024-52.973 41.024-30.227 0-54.722-24.536-54.722-54.816S38.587 4.138 68.814 4.138z"
+            fill="#F26B00"
+            fill-rule="nonzero"
+          />
+        </svg>
       </div>
     </section>
 
-    <section class="slide slide-usage-statsboard">
-      <h2>Usage // <span class="text-light"><a href="https://statsboard.pinadmin.com/build2?begin=-12h&settings=%7B%22cmd%22%3A%22return+%28stat%2F100%29.dropna%28%29%22%2C%22forms%22%3A%5B%7B%22aggregator%22%3A%22avg%22%2C%22alias%22%3A%22stat%22%2C%22downsample%22%3Atrue%2C%22downsampleAggregator%22%3A%22avg%22%2C%22downsampleInterval%22%3A%221h%22%2C%22metric%22%3A%22stats.gauges.webapp.gestalt.component_usage_v2_subdirectory.app_common_react_components_growth*%22%2C%22usePreAgg%22%3Atrue%7D%5D%2C%22hiddenTags%22%3A%5B%22nm%22%5D%2C%22legendPosition%22%3A%22bottom%22%2C%22title%22%3A%22Gestalt+Usage%3A+app%2Fcommon%2Freact%2Fcomponents%2Fgrowth%22%2C%22y_axis_label%22%3A%22Percent+of+components%22%2C%22reducer_interval%22%3A3600%7D&dashboard=%2Fd%2Fgestalt%2Fusage%2FOverall%2520usage&use_preagg=true">Per Directory</a></span></h2>
-      <div style="display: flex; justify-content: center;">
-        <img src="pictures/gestalt-usage.png" width="700">
+    <section class="slide slide-list slide-dark">
+      <h2>Relay: Core Modules</h2>
+      <ol>
+        <!-- prettier-ignore -->
+        <li>Relay Compiler
+          <div class="small">
+            Transforms &amp; optimizes queries + support for custom directives
+          </div>
+        </li>
+        <!-- prettier-ignore -->
+        <li>Relay Runtime
+          <div class="small">
+            High-performance GraphQL runtime that can be used to build higher-level client APIs
+          </div>
+        </li>
+        <!-- prettier-ignore -->
+        <li>React/Relay
+          <div class="small">
+            Product API that integrates the Relay Runtime with React
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide slide-dark slide-code-inline slide-hide-count">
+      <div style="margin-top: -3em">
+        <pre
+          class="line-numbers"
+        ><div class="code-title">Relay compiler input</div><code class="language-graphql">query EditProfileGraphQLQuery {
+  me {
+    ... on Account {
+      pinner {
+        firstName
+      }
+    }
+    ... on NotFound {
+      error {
+        message
+      }
+    }
+  }
+}</code></pre>
       </div>
     </section>
 
-    <section class="slide slide-code">
-      <iframe
-        src="https://repoinfo.now.sh/info?query=pinterest%2Fgestalt"
-        sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-      ></iframe>
+    <section class="slide slide-dark slide-code-inline slide-hide-count">
+      <div style="margin-top: -3em">
+        <pre
+          class="line-numbers"
+        ><div class="code-title">Relay compiler output (flow types!)</div><code class="language-graphql">export type EditProfileGraphQLQueryVariables = {||};
+export type EditProfileGraphQLQueryResponse = {|
+  +me: ?{|
+    +pinner?: ?{|
+      +firstName: ?string
+    |},
+    +error?: {|
+      +message: string
+    |},
+  |}
+|};
+export type EditProfileGraphQLQuery = {|
+  variables: EditProfileGraphQLQueryVariables,
+  response: EditProfileGraphQLQueryResponse,
+|};</code></pre>
+      </div>
+    </section>
+
+    <section class="slide slide-image slide-dark">
+      <h2>Relay Compiler: command</h2>
+      <div class="text-center">
+        <img width="800" src="pictures/relay-cmd-output.png" />
+      </div>
+    </section>
+
+    <section class="slide slide-list slide-dark">
+      <h2>React/Relay</h2>
+      <ul>
+        <!-- prettier-ignore -->
+        <li>Requires a
+          <code style="font-family: monospace"
+            >&lt;RelayEnvironmentProvider /&gt;</code
+          >
+          <div class="small">
+            Already loaded in <code style="font-family: monospace"
+              >Document.js</code
+            >
+          </div>
+        </li>
+        <!-- prettier-ignore -->
+        <li>Always use the hooks API
+          <div class="small">
+            <a href="https://phabricator.pinadmin.com/D646686">SRR</a>, Cache optimizations & easier to flowtype
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide slide-dark slide-code-inline slide-hide-count">
+      <h2>React/Relay: Fetch</h2>
+
+      <div>
+        <pre
+          style="font-size: 0.7em; padding-top: 0"
+          class="line-numbers"
+        ><code class="language-jsx">import { useLazyLoadQuery } from 'react-relay/hooks';
+import type { EditProfileGraphQLQuery } from
+  '../__generated__/EditProfileGraphQLQuery.graphql.js';
+
+export default function EditProfileGraphQL() {
+  const data = useLazyLoadQuery&lt;EditProfileGraphQLQuery&gt;(query);
+  const { pinner } = data.me ?? {};
+
+  return &lt;Box&gt;{pinner.firstName}&lt;/Box&gt;;
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="slide slide-dark slide-code-inline slide-hide-count">
+      <h2>React/Relay: Mutation</h2>
+
+      <div>
+        <pre
+          style="font-size: 0.7em; padding-top: 0"
+          class="line-numbers"
+        ><code class="language-jsx">import type {SaveButtonMutation} from 'SaveButtonMutation.graphql';
+const {useMutation} = require('react-relay/hooks');
+
+export default function SaveButton(props: {| +pinId: string |}) {
+  const [commit, isInFlight] = useMutation&lt;SaveButtonMutation&gt;(mutationQuery);
+
+  const mutationConfig = {
+    variables: {
+      input: props.id,
+    },
+  };
+
+  return (
+    &lt;Button disabled={isInFlight} onClick={() => commit(mutationConfig)}&gt;
+      Save
+    &lt;/Button&gt;
+  );
+}</code></pre>
+      </div>
+    </section>
+
+    <!-- <section class="slide slide-list slide-dark">
+      <h2>
+        Relay:
+        <a href="https://relay.dev/docs/en/graphql-server-specification.html"
+          >Server Specification</a
+        >
+      </h2>
+      <ol>
+        <li>Globally <a href="https://graphql.org/learn/global-object-identification/">unique id field</a> for every node
+          <div class="small">
+            Optimized cache & automatically update mutation references
+          </div>
+        </li>
+        <li>Pagination through
+          <a href="https://relay.dev/graphql/connections.htm"
+            >GraphQL connections</a
+          >
+        </li>
+        <li>Mutations are structured
+          <div class="small">
+            Product API that integrates the Relay Runtime with React
+          </div>
+        </li>
+      </ol>
+    </section> -->
+
+    <section class="slide slide-list slide-dark">
+      <h2>Relay vs Apollo: Benefits</h2>
+      <ul>
+        <li>Improved rendering performance</li>
+        <li>Faster incremental compile times</li>
+        <li>Stricter type definitons</li>
+        <!-- prettier-ignore -->
+        <li>Fragments don’t need to be imported
+          <!-- <div class="small">
+            Avoids circular imports &amp; better code-splitting
+          </div> -->
+        </li>
+        <!-- prettier-ignore -->
+        <li>Supports serverside
+          <code style="font-family: monospace">&lt;Suspense/&gt;</code>
+        </li>
+      </ul>
+      <!-- <a
+        href="https://paper.dropbox.com/doc/GraphQL-Relay-vs-Apollo--BAE22fvSa~ve5Syk5xTOJ_XvAg-ZAnE5azo0YUqmT4R8WCl2"
+        >Investigation doc</a
+      > -->
+    </section>
+
+    <section class="slide slide-image slide-dark slide-relay-devtools">
+      <h2>
+        <a href="https://github.com/relayjs/relay-devtools">Relay Devtools</a>
+      </h2>
+    </section>
+
+    <section class="slide slide-list slide-dark">
+      <h2>Relay: Resources</h2>
+      <ul>
+        <li>
+          <a href="https://relay.dev/docs/en/experimental/api-reference"
+            >Hooks documentation</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/relayjs/relay-examples/tree/master/issue-tracker"
+            >Official hooks example</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.quora.com/q/quoraengineering/Choosing-Quora-s-GraphQL-client"
+            >Quora Engineering: Choosing a GraphQL Client</a
+          >
+        </li>
+      </ul>
     </section>
 
     <section class="slide slide-image slide-grid slide-thankyou">
@@ -181,40 +482,36 @@
       <iframe src="thankyou/index.html" width="100%" height="400px"></iframe>
 
       <div class="flexy">
-        <h3>Aiwei Wu</h3>
-        <h3>Alberto Carreras</h3>
-        <h3>Annie Won</h3>
-        <h3>Anyi Diao</h3>
-        <h3>Brent Traut</h3>
-        <h3>Chong Yao</h3>
-        <h3>Christian Vuerings</h3>
-        <h3>Dena Mwangi</h3>
-        <h3>Elia Karagiannis</h3>
-        <h3>Emily Chen</h3>
-        <h3>Eva Zhang</h3>
-        <h3>Ignacio Fassini</h3>
-        <h3>Jenny Steele</h3>
-        <h3>Peter Zed</h3>
-        <h3>Ryan James</h3>
-        <h3>Selena Zeng</h3>
-        <h3>Tuan Huynh</h3>
+        <h3>Angel Vargas</h3>
+        <h3>Matt Leonard</h3>
+        <h3>Steve Rice</h3>
+        <h3>Swati Kumar</h3>
+        <h3>Yen-Wei Liu</h3>
       </div>
     </section>
 
     <script>
-      const slideThankYou = document.querySelector('.slide-thankyou');
-      const slideThankYouIframe = document.querySelector('.slide-thankyou iframe');
+      const slideThankYou = document.querySelector(".slide-thankyou");
+      const slideThankYouIframe = document.querySelector(
+        ".slide-thankyou iframe"
+      );
 
       const setIframeSrc = (src) => {
-        if (slideThankYouIframe.getAttribute('src') !== src) {
-          slideThankYouIframe.setAttribute('src', src);
+        if (slideThankYouIframe.getAttribute("src") !== src) {
+          slideThankYouIframe.setAttribute("src", src);
         }
-      }
+      };
 
       setInterval(() => {
-        setIframeSrc(slideThankYou.classList.contains('active') ? 'thankyou/index.html' : '');
+        setIframeSrc(
+          slideThankYou.classList.contains("active")
+            ? "thankyou/index.html"
+            : ""
+        );
       }, 1000);
     </script>
-    <script src="shower/shower.min.js"></script>
+    <script src="assets/prism.js"></script>
+    <script src="assets/prism-line-numbers.js"></script>
+    <script src="assets/shower.min.js"></script>
   </body>
 </html>
