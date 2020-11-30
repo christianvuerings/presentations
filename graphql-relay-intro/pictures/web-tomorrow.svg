@@ -7,13 +7,12 @@
             <polygon id="Path" fill="#3D3467" points="68.4617 261.886 268.332 261.886 268.332 378.114 68.4617 378.114"></polygon>
             <polygon id="Path" fill="#FFFFFF" points="284.754 315.067 284.754 324.424 373.654 324.424 373.654 338.461 397.049 319.745 373.654 301.029 373.654 315.067"></polygon>
             <polygon id="Path" fill="#3D3467" points="412.065 261.886 611.935 261.886 611.935 378.114 412.065 378.114"></polygon>
-            <text id="Node.js-GraphQL-Prox" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
-                <tspan x="460.822425" y="295">Node.js</tspan>
-                <tspan x="449.982581" y="331">GraphQL</tspan>
-                <tspan x="473.339515" y="367">Proxy</tspan>
+            <text id="GraphQL-Proxy" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
+                <tspan x="449.982581" y="313">GraphQL</tspan>
+                <tspan x="473.339515" y="349">Proxy</tspan>
             </text>
-            <text id="Browser" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
-                <tspan x="113.669593" y="331">Browser</tspan>
+            <text id="Client" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
+                <tspan x="130.332191" y="331">Client</tspan>
             </text>
             <polygon id="Path" fill="#3D3467" points="755.335 261.886 955.205 261.886 955.205 378.114 755.335 378.114"></polygon>
             <polygon id="Path" fill="#FFFFFF" points="630.114 315.322 630.114 324.679 719.014 324.679 719.014 338.716 742.409 320 719.014 301.284 719.014 315.322"></polygon>

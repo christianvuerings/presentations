@@ -12,8 +12,8 @@
                 <tspan x="447.485023" y="331">Resource</tspan>
                 <tspan x="474.159827" y="367">Layer</tspan>
             </text>
-            <text id="Browser" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
-                <tspan x="113.669593" y="331">Browser</tspan>
+            <text id="Client" fill="#FFFFFF" fill-rule="nonzero" font-family="Helvetica" font-size="30" font-weight="normal">
+                <tspan x="130.332191" y="331">Client</tspan>
             </text>
             <polygon id="Path" fill="#3D3467" points="755.335 261.886 955.205 261.886 955.205 378.114 755.335 378.114"></polygon>
             <polygon id="Path" fill="#FFFFFF" points="630.114 315.322 630.114 324.679 719.014 324.679 719.014 338.716 742.409 320 719.014 301.284 719.014 315.322"></polygon>

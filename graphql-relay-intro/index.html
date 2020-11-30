@@ -31,7 +31,7 @@
         <li>Pinterest Web Today</li>
         <li>GraphQL</li>
         <li>Relay</li>
-        <li>Code!</li>
+        <li>Rollout Plan</li>
         <li>Q&amp;A</li>
       </ul>
     </section>
@@ -95,25 +95,25 @@
         </li>
         <li>
           <a
-            href="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20coreUser(id%3A%20%22207025051529119245%22)%7B%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%20%20about%0A%20%20%7D%0A%7D%0A"
+            href="https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20ArgumentsQuery%20%7B%0A%20%20coreUser(id%3A%20%22207025051529119245%22)%7B%0A%20%20%20%20firstName%0A%20%20%20%20lastName%0A%20%20%20%20about%0A%20%20%7D%0A%7D%0A"
             >Query with Arguments</a
           >
         </li>
         <li>
           <a
-            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20username%0A%20%20%7D%0A%20%20%0A%20%20allCountries%0A%7D'
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20CombinationQuery%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20username%0A%20%20%7D%0A%20%20%0A%20%20allCountries%0A%7D'
             >Combination Query</a
           >
         </li>
         <li>
           <a
-            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?query=query%20Viewer%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20followers(first%3A%2010)%20%7B%0A%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20user%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20firstName%0A%20%20%20%20%20%20%20%20%20%20%20%20lastName%0A%20%20%20%20%20%20%20%20%20%20%20%20boards(first%3A%205)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20NestedQuery%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20followers(first%3A%2010)%20%7B%0A%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20user%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20firstName%0A%20%20%20%20%20%20%20%20%20%20%20%20lastName%0A%20%20%20%20%20%20%20%20%20%20%20%20boards(first%3A%205)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
             >Nested Query</a
           >
         </li>
         <li>
           <a
-            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20Viewer%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20boards(first%3A%205)%20%7B%0A%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20pageInfo%20%7B%0A%20%20%20%20%20%20%20%20endCursor%0A%20%20%20%20%20%20%20%20hasNextPage%0A%20%20%20%20%20%20%20%20hasPreviousPage%0A%20%20%20%20%20%20%20%20startCursor%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query%20PaginationQuery%20%7B%0A%20%20coreUser(id%3A%20"207025051529119245")%20%7B%0A%20%20%20%20boards(first%3A%205)%20%7B%0A%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20pageInfo%20%7B%0A%20%20%20%20%20%20%20%20endCursor%0A%20%20%20%20%20%20%20%20hasNextPage%0A%20%20%20%20%20%20%20%20hasPreviousPage%0A%20%20%20%20%20%20%20%20startCursor%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
             >Pagination</a
           >
         </li>
@@ -145,7 +145,7 @@
         </li>
         <li>
           <a
-            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=query=%7B%0A%20%20__type(name%3A%20"BoardLayout")%20%7B%0A%20%20%20%20name%0A%20%20%20%20kind%0A%20%20%20%20enumValues%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
+            href='https://graphql-dev-cvuerings.pinterdev.com/graphiql?explorerIsOpen=false&query=%7B%0A%20%20__type(name%3A%20"BoardLayout")%20%7B%0A%20%20%20%20name%0A%20%20%20%20kind%0A%20%20%20%20enumValues%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A'
             >Values for BoardLayout (enum)</a
           >
         </li>
@@ -386,7 +386,35 @@ export default function SaveButton(props: {| +pinId: string |}) {
 
   const mutationConfig = {
     variables: {
-      input: props.id,
+      input: props.pinId,
+    },
+  };
+
+  return (
+    &lt;Button disabled={isInFlight} onClick={() => commit(mutationConfig)}&gt;
+      Save
+    &lt;/Button&gt;
+  );
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="slide slide-dark slide-code-inline slide-hide-count">
+      <h2>React/Relay: Mutation</h2>
+
+      <div>
+        <pre
+          style="font-size: 0.7em; padding-top: 0"
+          class="line-numbers"
+        ><code class="language-jsx">export default function SaveButton(props: {| +pinId: string |}) {
+  const [commit, isInFlight] = useMutation&lt;SaveButtonMutation&gt;(mutationQuery);
+
+  const mutationConfig = {
+    onCompleted(data) {
+      console.log(data);
+    },
+    variables: {
+      input: props.pinId,
     },
   };
 
@@ -474,7 +502,27 @@ export default function SaveButton(props: {| +pinId: string |}) {
             >Quora Engineering: Choosing a GraphQL Client</a
           >
         </li>
+        <li>
+          <a href="https://dev.to/zth/the-magic-of-the-node-interface-4le1"
+            >The magic of the Node interface</a
+          >
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=ZRnrt-Vqyo4"
+            >From being skeptical about Relay to falling in love with it</a
+          >
+        </li>
       </ul>
+    </section>
+
+    <section class="slide slide-list slide-dark">
+      <h2>2021 Rollout Plan (WIP)</h2>
+      <ol>
+        <!-- prettier-ignore -->
+        <li>Q1: Ship Settings experiment &amp; platform improvements</li>
+        <li>Q2: New features use GraphQL</li>
+        <li>H2: Convert a major surface to GraphQL</li>
+      </ol>
     </section>
 
     <section class="slide slide-image slide-grid slide-thankyou">
