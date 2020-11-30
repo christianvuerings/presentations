@@ -410,7 +410,7 @@ export default function SaveButton(props: {| +pinId: string |}) {
   const [commit, isInFlight] = useMutation&lt;SaveButtonMutation&gt;(mutationQuery);
 
   const mutationConfig = {
-    onCompleted(data) {
+    onCompleted: (data) => {
       console.log(data);
     },
     variables: {
